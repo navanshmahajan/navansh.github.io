@@ -3,7 +3,7 @@
 # PowerApps
 # Power BI
 Provides an overview of the type of projects undertaken in Power Platform
-# SahrePoint Permission Levels
+# SharePoint Permission Levels
 Site Collection Administrator
 Full Control - includes owner level permissions including deleting site
 Design - includes owner level permissions excluding deleting site
