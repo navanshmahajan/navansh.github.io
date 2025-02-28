@@ -124,9 +124,20 @@
       margin-bottom: 1rem;
       border-radius: 4px;
     }
-    /* Contact Section */
-    #contact {
+    /* Improved Contact Section */
+    #contact .contact-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+    #contact .contact-item {
+      background: #e6f2ff;
+      padding: 15px;
+      border-radius: 8px;
+      font-weight: bold;
       text-align: center;
+      color: #0078d4;
     }
     /* Footer */
     footer {
@@ -267,13 +278,15 @@
   <!-- Contact Section -->
   <section id="contact">
     <h2>Contact</h2>
-    <p><strong>Email:</strong> navansh.mahajan@gmail.com</p>
-    <p><strong>Phone:</strong> +49-15205675308</p>
-    <p><strong>Date of Birth:</strong> 20-Oct-1987</p>
-    <p><strong>Birth Place:</strong> Pathankot, Punjab, India</p>
-    <p><strong>Location:</strong> Munich, Germany</p>
-    <p><strong>Visa:</strong> Chancenkarte (Opportunity Card) | Valid: 22-Oct-2024 to 21-Oct-2025</p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/navanshmahajan/" target="_blank">www.linkedin.com/in/navanshmahajan</a></p>
+    <div class="contact-container">
+      <div class="contact-item"><strong>Email:</strong> navansh.mahajan@gmail.com</div>
+      <div class="contact-item"><strong>Phone:</strong> +49-15205675308</div>
+      <div class="contact-item"><strong>Date of Birth:</strong> 20-Oct-1987</div>
+      <div class="contact-item"><strong>Birth Place:</strong> Pathankot, Punjab, India</div>
+      <div class="contact-item"><strong>Location:</strong> Munich, Germany</div>
+      <div class="contact-item"><strong>Visa:</strong> Chancenkarte (Opportunity Card)<br>Valid: 22-Oct-2024 to 21-Oct-2025</div>
+      <div class="contact-item" style="grid-column: span 3;"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/navanshmahajan/" target="_blank">www.linkedin.com/in/navanshmahajan</a></div>
+    </div>
   </section>
 
   <!-- Footer -->
