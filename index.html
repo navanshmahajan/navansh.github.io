@@ -20,7 +20,7 @@
       text-decoration: none;
       color: inherit;
     }
-    /* Navigation Bar */
+    /* Navigation */
     nav {
       background-color: #0078d4;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -44,16 +44,12 @@
     nav ul li a:hover {
       background-color: #005fa3;
     }
-    /* Header Section */
+    /* Header */
     header {
       background: linear-gradient(135deg, #0078d4, #00aaff);
       color: white;
       text-align: center;
       padding: 3rem 0;
-    }
-    .header-content {
-      max-width: 1000px;
-      margin: 0 auto;
     }
     .header-content img {
       width: 150px;
@@ -63,41 +59,56 @@
       margin-bottom: 1rem;
       border: 4px solid #fff;
     }
-    /* Section Base Style */
-    section {
+    /* Projects Section */
+    #projects {
       padding: 2rem;
-      max-width: 1000px;
+      max-width: 1200px;
       margin: 2rem auto;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-    section h2 {
+    #projects h2 {
+      text-align: center;
       color: #0078d4;
-      margin-top: 0;
-    }
-    /* Projects Section Styling (as before) */
-    .project {
-      background-color: white;
       margin-bottom: 2rem;
+    }
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .project-card {
+      background: #fff;
+      border-radius: 8px;
       padding: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .project-card h3 {
+      margin-top: 0;
+      color: #0078d4;
+    }
+    .project-card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    /* Contact Section */
+    #contact {
+      background: #fff;
+      padding: 2rem;
+      max-width: 600px;
+      margin: 2rem auto;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
     }
-    .project img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 1rem;
-      border-radius: 4px;
+    #contact h2 {
+      color: #0078d4;
     }
-    .project .excel-sheet {
-      margin-top: 1rem;
-    }
-    .project .excel-sheet iframe {
-      width: 100%;
-      height: 400px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
+    #contact p {
+      font-size: 1rem;
+      line-height: 1.6;
     }
     /* Footer */
     footer {
@@ -114,144 +125,4 @@
   <!-- Navigation -->
   <nav>
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Home Section -->
-  <header id="home">
-    <div class="header-content">
-      <img src="navansh_profile.jpg" alt="Navansh Mahajan Profile Picture">
-      <h1>Navansh Mahajan</h1>
-      <p>Digital Transformation Architect</p>
-      <p>Expert in Power Apps, Power Automate, and Power BI</p>
-      <p>Connect on <a href="https://www.linkedin.com/in/navanshmahajan/" target="_blank" style="color: white; text-decoration: underline;">LinkedIn</a></p>
-    </div>
-  </header>
-
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am an analytical thinker and agile problem solver with over 14 years of experience in designing, developing, and implementing cutting-edge automation solutions. My expertise lies in delivering digital transformations that streamline operations, enhance client satisfaction, and drive innovation.</p>
-  </section>
-
-  <!-- Projects Section (Styled as before) -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Project 1: Automated Sales Pipeline Management</h3>
-      <img src="sales_dashboard.png" alt="Sales Dashboard Screenshot">
-      <p>Developed a Power Apps solution to automate sales pipeline management, integrating with Dynamics 365 and SharePoint. Used Power Automate to streamline lead qualification and opportunity tracking.</p>
-      <div class="excel-sheet">
-        <h4>Supporting Excel Data</h4>
-        <iframe src="sales_data.xlsx"></iframe>
-      </div>
-    </div>
-
-    <div class="project">
-      <h3>Project 2: Employee Onboarding Workflow</h3>
-      <img src="onboarding_flow.png" alt="Onboarding Workflow Screenshot">
-      <p>Created a comprehensive employee onboarding process using Power Automate, including automated form submission, approval workflows, and integration with HR systems. Utilized Power Apps for a user-friendly onboarding portal.</p>
-      <div class="excel-sheet">
-        <h4>Workflow Configuration Data</h4>
-        <iframe src="workflow_config.xlsx"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience">
-    <h2>Work Experience</h2>
-    <h3>Digital Transformation Architect</h3>
-    <p><strong>Nokia Solutions and Networks, Noida, India</strong> | Dec 2020 - Present</p>
-    <ul>
-      <li>Transformed an Excel tool into a secure Power Apps solution integrated with SharePoint.</li>
-      <li>Developed a Power Platform integration reducing user inputs and accelerating quote generation.</li>
-      <li>Optimized Power Automate flows to synchronize large datasets efficiently.</li>
-      <li>Automated document generation and CRM integration, significantly reducing manual effort.</li>
-    </ul>
-
-    <h3>Senior Solutions Specialist</h3>
-    <p><strong>Nokia Solutions and Networks, Noida, India</strong> | Oct 2016 - Dec 2020</p>
-    <ul>
-      <li>Managed complex cross-industry deals and supported competitive proposals.</li>
-      <li>Utilized data analytics to inform sales strategies and product development.</li>
-    </ul>
-
-    <h3>Senior SRF Engineer</h3>
-    <p><strong>Nokia Solutions and Networks, Noida, India</strong> | Jul 2013 - Oct 2016</p>
-    <ul>
-      <li>Led projects that migrated online charging systems and implemented location-based solutions.</li>
-      <li>Automated data transfers and managed network configurations to enhance operational efficiency.</li>
-    </ul>
-
-    <h3>Senior Packet Core Engineer</h3>
-    <p><strong>Nokia Solutions and Networks, Noida, India</strong> | Apr 2010 - Jul 2013</p>
-    <ul>
-      <li>Developed tools to reduce commissioning times and streamline network configurations.</li>
-      <li>Enhanced troubleshooting processes during network outages.</li>
-    </ul>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Microsoft Power Automate</li>
-      <li>Microsoft Power Apps</li>
-      <li>Microsoft Power BI</li>
-      <li>SharePoint</li>
-      <li>TypeScript</li>
-      <li>Project Management</li>
-      <li>Microsoft Power Platform</li>
-      <li>Office 365</li>
-      <li>Online Excel Scripting (Office Scripts)</li>
-    </ul>
-  </section>
-
-  <!-- Education Section -->
-  <section id="education">
-    <h2>Education & Certifications</h2>
-    <h3>Bachelor of Technology in Electronics and Communication Engineering</h3>
-    <p><strong>Punjab Technical University</strong> | Aug 2005 - Aug 2009</p>
-    <p>Anabin: State University | Status: H+ (Recognized Institution)</p>
-    <h3>Certifications</h3>
-    <ul>
-      <li>ITIL Foundation (June 2016)</li>
-      <li>Data Science Orientation (Sep 2021)</li>
-      <li>Career Essentials in Generative AI (Aug 2023)</li>
-      <li>Goethe-Zertifikat A1: Start Deutsch 1 (Sep 2023)</li>
-    </ul>
-    <h3>Languages</h3>
-    <ul>
-      <li>English: Native (C2)</li>
-      <li>Hindi: Native (C2)</li>
-      <li>Punjabi: Native (C1)</li>
-      <li>German: A1</li>
-    </ul>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p><strong>Email:</strong> navansh.mahajan@gmail.com</p>
-    <p><strong>Phone:</strong> +49-15205675308</p>
-    <p><strong>Date of Birth:</strong> 20-Oct-1987</p>
-    <p><strong>Birth Place:</strong> Pathankot, Punjab, India</p>
-    <p><strong>Location:</strong> Munich, Germany</p>
-    <p><strong>Visa:</strong> Chancenkarte (Opportunity Card) | Valid: 22-Oct-2024 to 21-Oct-2025</p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/navanshmahajan/" target="_blank">www.linkedin.com/in/navanshmahajan</a></p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Navansh Mahajan | <a href="https://www.linkedin.com/in/navanshmahajan/" target="_blank">LinkedIn</a></p>
-  </footer>
-</body>
-</html>
+ 
