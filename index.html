@@ -34,11 +34,7 @@
     nav ul li a:hover { background-color: #005fa3; }
 
     /* Language Switcher */
-    .language-switcher {
-      padding: 5px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+    .language-switcher { padding: 5px; border-radius: 5px; cursor: pointer; }
 
     /* Header */
     header {
@@ -49,6 +45,23 @@
     }
     .header-content img {
       width: 120px; height: 120px; border-radius: 50%; border: 4px solid #fff;
+    }
+
+    /* Power Platform Icons */
+    .power-icons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    .power-icons img {
+      width: 50px;
+      height: auto;
+      transition: transform 0.2s;
+    }
+    .power-icons img:hover {
+      transform: scale(1.1);
     }
 
     /* Connect Buttons */
@@ -68,17 +81,18 @@
       border-radius: 5px;
       font-weight: bold;
       transition: background 0.3s, transform 0.2s;
+      border: 2px solid transparent;
     }
     .connect-button img {
-      width: 20px;
-      height: 20px;
+      width: 25px;
+      height: auto;
     }
     .connect-button:hover {
       background: #e6f2ff;
       transform: scale(1.05);
     }
-    .linkedin { border: 2px solid #0077b5; }
-    .xing { border: 2px solid #026466; color: #026466; }
+    .linkedin { border-color: #0077b5; }
+    .xing { border-color: #026466; color: #026466; }
 
     /* Mobile Optimization */
     @media (max-width: 768px) {
@@ -112,41 +126,32 @@
     <h1 data-lang-en="Navansh Mahajan" data-lang-de="Navansh Mahajan">Navansh Mahajan</h1>
     <p data-lang-en="Digital Transformation Architect" data-lang-de="Architekt für Digitale Transformation">Digital Transformation Architect</p>
 
+    <!-- Power Platform Icons -->
+    <div class="power-icons">
+      <img src="Icons/AIBuilder_scalable.svg" alt="AI Builder">
+      <img src="Icons/CopilotStudio_scalable.svg" alt="Copilot Studio">
+      <img src="Icons/Dataverse_scalable.svg" alt="Dataverse">
+      <img src="Icons/PowerApps_scalable.svg" alt="PowerApps">
+      <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate">
+      <img src="Icons/PowerBI_scalable.svg" alt="Power BI">
+      <img src="Icons/PowerFx_scalable.svg" alt="Power Fx">
+      <img src="Icons/PowerPages_scalable.svg" alt="Power Pages">
+      <img src="Icons/PowerPlatform_scalable.svg" alt="Power Platform">
+    </div>
+
     <!-- Connect Buttons -->
     <div class="connect-buttons">
       <a href="https://www.linkedin.com/in/navanshmahajan/" target="_blank" class="connect-button linkedin">
-        <img src="linkedin_icon.png" alt="LinkedIn"> 
+        <img src="Icons/Linkedin Icon.png" alt="LinkedIn"> 
         <span data-lang-en="LinkedIn" data-lang-de="LinkedIn">LinkedIn</span>
       </a>
       <a href="https://www.xing.com/profile/Navansh_Mahajan" target="_blank" class="connect-button xing">
-        <img src="xing_icon.png" alt="Xing">
+        <img src="Icons/Xing logo.svg" alt="Xing">
         <span data-lang-en="Xing" data-lang-de="Xing">Xing</span>
       </a>
     </div>
   </div>
 </header>
-
-<!-- About Section -->
-<section id="about">
-  <h2 data-lang-en="About Me" data-lang-de="Über Mich">About Me</h2>
-  <p data-lang-en="I am an analytical thinker and problem solver with 14+ years of experience in automation solutions."
-     data-lang-de="Ich bin ein analytischer Denker und Problemlöser mit über 14 Jahren Erfahrung in Automatisierungslösungen.">
-     I am an analytical thinker and problem solver with 14+ years of experience in automation solutions.
-  </p>
-</section>
-
-<!-- Contact Section -->
-<section id="contact">
-  <h2 data-lang-en="Contact" data-lang-de="Kontakt">Contact</h2>
-  <div class="contact-container">
-    <div class="contact-item"><strong>Email:</strong> navansh.mahajan@gmail.com</div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer>
-  <p>&copy; 2024 Navansh Mahajan | <a href="https://www.linkedin.com/in/navanshmahajan/" target="_blank">LinkedIn</a></p>
-</footer>
 
 <!-- JavaScript for Language Switcher -->
 <script>
