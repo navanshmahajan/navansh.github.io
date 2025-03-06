@@ -9,7 +9,7 @@
     * { box-sizing: border-box; }
     body { font-family: sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; line-height: 1.8; }
     a { text-decoration: none; color: inherit; }
-    
+
     /* Navigation */
     nav {
       background-color: #0078d4;
@@ -35,11 +35,11 @@
 
     /* Language Switcher */
     .language-switcher {
-      background: #fff;
-      border-radius: 5px;
       padding: 5px;
+      border-radius: 5px;
+      cursor: pointer;
     }
-    
+
     /* Header */
     header {
       background: linear-gradient(135deg, #0078d4, #00aaff);
@@ -51,38 +51,38 @@
       width: 120px; height: 120px; border-radius: 50%; border: 4px solid #fff;
     }
 
-    /* Sections */
-    section { padding: 2rem; max-width: 1200px; margin: 2rem auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    section h2 { color: #0078d4; text-align: center; }
-
-    /* Project Cards */
-    .projects-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-    .project-card {
-      background: #f0f7ff;
-      border-radius: 8px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .project-card:nth-child(even) { background: #e6f2ff; }
-    .project-card:hover { transform: translateY(-5px); box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
-    
-    /* Contact */
-    .contact-container {
+    /* Connect Buttons */
+    .connect-buttons {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
+      gap: 10px;
+      margin-top: 10px;
     }
-    .contact-item { flex: 1 1 30%; text-align: center; background: #e6f2ff; padding: 15px; border-radius: 8px; }
-    
-    /* Footer */
-    footer { text-align: center; padding: 1rem 0; background-color: #ddd; }
+    .connect-button {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      color: #0078d4;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .connect-button img {
+      width: 20px;
+      height: 20px;
+    }
+    .connect-button:hover {
+      background: #e6f2ff;
+      transform: scale(1.05);
+    }
+    .linkedin { border: 2px solid #0077b5; }
+    .xing { border: 2px solid #026466; color: #026466; }
 
     /* Mobile Optimization */
     @media (max-width: 768px) {
       nav ul { flex-direction: column; text-align: center; }
-      .projects-container { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -111,7 +111,18 @@
     <img src="navansh_profile.jpg" alt="Navansh Mahajan">
     <h1 data-lang-en="Navansh Mahajan" data-lang-de="Navansh Mahajan">Navansh Mahajan</h1>
     <p data-lang-en="Digital Transformation Architect" data-lang-de="Architekt für Digitale Transformation">Digital Transformation Architect</p>
-    <a href="https://www.linkedin.com/in/navanshmahajan/" target="_blank" class="cta-button" data-lang-en="Let's Connect" data-lang-de="Verbinden Sie sich">Let's Connect</a>
+
+    <!-- Connect Buttons -->
+    <div class="connect-buttons">
+      <a href="https://www.linkedin.com/in/navanshmahajan/" target="_blank" class="connect-button linkedin">
+        <img src="linkedin_icon.png" alt="LinkedIn"> 
+        <span data-lang-en="LinkedIn" data-lang-de="LinkedIn">LinkedIn</span>
+      </a>
+      <a href="https://www.xing.com/profile/Navansh_Mahajan" target="_blank" class="connect-button xing">
+        <img src="xing_icon.png" alt="Xing">
+        <span data-lang-en="Xing" data-lang-de="Xing">Xing</span>
+      </a>
+    </div>
   </div>
 </header>
 
@@ -122,22 +133,6 @@
      data-lang-de="Ich bin ein analytischer Denker und Problemlöser mit über 14 Jahren Erfahrung in Automatisierungslösungen.">
      I am an analytical thinker and problem solver with 14+ years of experience in automation solutions.
   </p>
-</section>
-
-<!-- Projects Section -->
-<section id="projects">
-  <h2 data-lang-en="Projects" data-lang-de="Projekte">Projects</h2>
-  <div class="projects-container">
-    <div class="project-card">
-      <h3 data-lang-en="Enhanced Security & Streamlined Development" data-lang-de="Erhöhte Sicherheit & optimierte Entwicklung">
-        Enhanced Security & Streamlined Development
-      </h3>
-      <p data-lang-en="Transformed a security-compromised Excel tool by migrating to Power Apps." 
-         data-lang-de="Transformation eines sicherheitsgefährdeten Excel-Tools durch Migration zu Power Apps.">
-         Transformed a security-compromised Excel tool by migrating to Power Apps.
-      </p>
-    </div>
-  </div>
 </section>
 
 <!-- Contact Section -->
