@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Navansh Mahajan - Digital Transformation Architect, specializing in Power Platform, RPA, and automation solutions.">
+  <meta property="og:title" content="Navansh Mahajan - Digital Transformation Architect">
+  <meta property="og:description" content="Expert in Microsoft Power Platform, RPA, and automation solutions.">
+  <meta property="og:image" content="navansh_profile.jpg">
+  <meta property="og:type" content="website">
+  <title>Navansh Mahajan - Digital Transformation Architect</title>
+  <style>
+    /* Global Styles */
+    * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+    body { font-family: sans-serif; background-color: #f4f4f4; line-height: 1.8; }
+
+    /* Navigation */
+    nav {
+      background-color: #0078d4;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    nav ul li { margin: 0 10px; }
+    nav ul li a {
+      color: #fff;
+      padding: 10px 15px;
+      transition: background 0.3s;
+    }
+    nav ul li a:hover { background-color: #005fa3; }
+
+    /* Hamburger Menu */
+    .hamburger { display: none; font-size: 24px; cursor: pointer; color: white; }
+    .nav-menu { display: flex; }
+    
+    /* Responsive Navigation */
+    @media (max-width: 768px) {
+      .nav-menu { display: none; flex-direction: column; background: #0078d4; position: absolute; width: 100%; top: 50px; left: 0; }
+      .nav-menu.show { display: flex; }
+      .hamburger { display: block; }
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #0078d4, #00aaff);
+      color: white;
+      text-align: center;
+      padding: 4rem 0;
+      margin-top: 50px;
+    }
+    .header-content img {
+      width: 120px; height: 120px; border-radius: 50%; border: 4px solid #fff;
+    }
+
+    /* Projects */
+    .projects-container { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+      gap: 20px;
+    }
+    .project-card {
+      background: #f0f7ff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px); 
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      background-color: #ddd;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <ul class="nav-menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Header Section -->
+<header id="home">
+  <div class="header-content">
+    <img src="navansh_profile.jpg" alt="Navansh Mahajan" loading="lazy">
+    <h1>Navansh Mahajan</h1>
+    <p>Digital Transformation Architect</p>
+  </div>
+</header>
+
+<!-- About Section -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>I am an analytical thinker and problem solver with 14+ years of experience in automation solutions.</p>
+</section>
+
+<!-- Projects Section -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects-container">
+    <div class="project-card">
+      <h3>Enhanced Security & Streamlined Development</h3>
+      <p>Transformed a security-compromised Excel tool by migrating its logic to Power Apps.</p>
+    </div>
+    <div class="project-card">
+      <h3>Automated Document Generation & CRM Integration</h3>
+      <p>Implemented Power Automate Word and Salesforce connectors to automate document creation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: navansh.mahajan@gmail.com</p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2024 Navansh Mahajan</p>
+</footer>
+
+<!-- JavaScript -->
+<script>
+  function toggleMenu() {
+    document.querySelector('.nav-menu').classList.toggle('show');
+  }
+</script>
+
+</body>
+</html>
