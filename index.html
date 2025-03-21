@@ -3,8 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Navansh Mahajan, Digital Transformation Architect specializing in Microsoft Power Platform">
-  <meta name="keywords" content="Power Platform, Power Apps, Power Automate, Power BI, Digital Transformation">
   <title>Navansh Mahajan - Digital Transformation Architect</title>
   <style>
     /* Global Styles */
@@ -20,10 +18,6 @@
       align-items: center;
       padding: 10px 20px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
     }
     nav ul {
       list-style: none;
@@ -42,112 +36,187 @@
     /* Language Switcher */
     .language-switcher { padding: 5px; border-radius: 5px; cursor: pointer; }
 
-    /* Header */
+    /* Header Old
     header {
       background: linear-gradient(135deg, #0078d4, #00aaff);
       color: white;
-      padding: 1rem 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      margin-top: 60px;
-      border-radius: 0;
-      flex-wrap: wrap;
-    }
-    .header-image { flex: 1; display: flex; justify-content: center; }
-    .header-image img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      border: 3px solid #fff;
-    }
-    .header-text {
-      flex: 2;
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-left: auto;
-      margin-right: auto;
+      padding: 2rem 0;
     }
-    .header-text h1 { font-size: 1.8rem; margin: 0; font-weight: bold; }
-    .header-text p { font-size: 1rem; margin: 5px 0; }
-    .power-icons { display: flex; justify-content: center; gap: 10px; margin-top: 8px; }
-    .power-icons img { width: 32px; height: auto; transition: transform 0.2s; }
-    .power-icons img:hover { transform: scale(1.1); }
-    .connect-buttons { display: flex; justify-content: flex-end; gap: 8px; }
-    .connect-button {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      background: #fff;
-      color: #0078d4;
-      height: 35px;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background 0.3s, transform 0.2s;
-      border: 2px solid transparent;
-      font-size: 0.85rem;
-      padding: 0 10px;
+    .header-content img {
+      width: 120px; height: 120px; border-radius: 50%; border: 4px solid #fff;
     }
-    .connect-button img { width: 20px; height: auto; }
-    .connect-button:hover { background: #e6f2ff; transform: scale(1.05); }
-    .linkedin { border-color: #0077b5; }
-    .xing { border-color: #026466; color: #026466; }
+*/
 
-    /* Call-to-Action Button */
-    .cta {
-      background: #fff;
-      color: #0078d4;
-      padding: 5px 15px;
-      height: 35px;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background 0.3s, transform 0.2s;
-      border: 2px solid #0078d4;
-    }
-    .cta:hover { background: #e6f2ff; transform: scale(1.05); }
 
-    /* Responsive Header */
-    @media (max-width: 768px) {
-      header { flex-direction: column; text-align: center; padding: 1rem 10px; }
-      .header-image { justify-content: center; margin-bottom: 10px; }
-      .connect-buttons { justify-content: center; margin-top: 10px; }
-    }
+/* Header - Full Width */
+header {
+  background: linear-gradient(135deg, #0078d4, #00aaff);
+  color: white;
+  padding: 1rem 20px; /* Reduced height */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; /* Full width */
+  margin: 0;
+  border-radius: 0; /* Remove rounded edges for full-width look */
+  flex-wrap: wrap;
+}
+
+/* Profile Image (Left-Aligned) */
+.header-image {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+}
+
+.header-image img {
+  width: 100px; /* Adjusted for better proportion */
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+/* Name & Title (Perfectly Centered) */
+.header-text {
+  flex: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-text h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.header-text p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Power Platform Icons (Properly Centered) */
+.power-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.power-icons img {
+  width: 32px; /* Slightly smaller */
+  height: auto;
+  transition: transform 0.2s;
+}
+
+.power-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Connect Buttons (Smaller, Compact Height) */
+.connect-buttons {
+  
+  display: flex;
+  justify-content: flex-end; /* Align right */
+  gap: 8px;
+}
+
+.connect-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  color: #0078d4;
+  /*padding: 5px 10px; */
+  height: 35px; /* Reduced height */
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+  border: 2px solid transparent;
+  font-size: 0.85rem; /* Adjusted text size */
+}
+
+.connect-button img {
+  width:20px; /* Slightly smaller */
+  height: auto;
+}
+
+.connect-button:hover {
+  background: #e6f2ff;
+  transform: scale(1.05);
+}
+
+.linkedin { border-color: #0077b5; }
+.xing { border-color: #026466; color: #026466; }
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 10px;
+  }
+
+  .header-image {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .connect-buttons {
+    justify-content: center;
+  }
+}
+
+
+
 
     /* Sections */
     section { padding: 2rem; max-width: 1200px; margin: 2rem auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
     section h2 { color: #0078d4; text-align: center; }
 
     /* Skills Section */
-    .skills-list {
-      list-style: none;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 10px;
-      padding: 0;
-      justify-content: center;
-    }
-    .skills-list li {
-      background: #e6f2ff;
-      padding: 10px 20px;
-      border-radius: 20px;
-      color: #0078d4;
-      font-weight: bold;
-      text-align: center;
-    }
+.skills-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+
+.skills-list li {
+  background: #e6f2ff;
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #0078d4;
+  font-weight: bold;
+  text-align: center;
+}
 
     /* Projects */
     .projects-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-    .project-card { background: #f0f7ff; border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .project-card {
+      background: #f0f7ff;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
     .project-card:nth-child(even) { background: #e6f2ff; }
     .project-card:hover { transform: translateY(-5px); box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
-    .project-image { max-width: 100%; height: auto; margin-top: 10px; border-radius: 4px; }
 
     /* Contact */
-    .contact-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
     .contact-item { flex: 1 1 30%; text-align: center; background: #e6f2ff; padding: 15px; border-radius: 8px; }
 
     /* Footer */
@@ -157,126 +226,157 @@
     @media (max-width: 768px) {
       nav ul { flex-direction: column; text-align: center; }
       .projects-container { grid-template-columns: 1fr; }
-      .connect-button, .cta { min-width: 44px; min-height: 44px; }
-      body { font-size: 14px; }
     }
-
-    /* Accessibility */
-    img[alt=""] { display: block; }
   </style>
 </head>
 <body>
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <select class="language-switcher" id="language-switcher">
-      <option value="en">🇬🇧 English</option>
-      <option value="de">🇩🇪 Deutsch</option>
-    </select>
-  </nav>
 
-  <!-- Header Section -->
-  <header id="home">
-    <div class="header-image">
-      <img src="docs/navansh_profile.jpg" alt="Navansh Mahajan Profile Picture">
-    </div>
+<!-- Navigation -->
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <!-- Language Switcher -->
+  <select class="language-switcher" id="language-switcher">
+    <option value="en">🇬🇧 English</option>
+    <option value="de">🇩🇪 Deutsch</option>
+  </select>
+</nav>
+
+<!-- Header Section -->
+<header id="home">
+  <!-- Profile Image (Left) -->
+  <div class="header-image">
+    <img src="docs/navansh_profile.jpg" alt="Navansh Mahajan">
+    <!-- Name & Title (Centered) -->
     <div class="header-text">
       <h1>Navansh Mahajan</h1>
       <p>Digital Transformation Architect</p>
-      <div class="power-icons">
-        <img src="Icons/PowerApps_scalable.svg" alt="">
-        <img src="Icons/PowerAutomate_scalable.svg" alt="">
-        <img src="Icons/PowerBI_scalable.svg" alt="">
-        <img src="Icons/PowerPlatform_scalable.svg" alt="">
-      </div>
+
+    <!-- Power Platform Icons -->
+    <div class="power-icons">
+      <img src="Icons/PowerApps_scalable.svg" alt="PowerApps">
+      <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate">
+      <img src="Icons/PowerBI_scalable.svg" alt="Power BI">
+      <img src="Icons/PowerPlatform_scalable.svg" alt="Power Platform">
     </div>
-    <div class="connect-buttons">
-      <a href="https://www.linkedin.com/in/navanshmahajan/" target="_blank" class="connect-button linkedin">
-        <img src="Icons/Linkedin Icon.png" alt=""> LinkedIn
-      </a>
-      <a href="https://www.xing.com/profile/Navansh_Mahajan" target="_blank" class="connect-button xing">
-        <img src="Icons/Xing logo.svg" alt=""> Xing
-      </a>
+  </div>
+
+    <!-- Connect Buttons (Left-Aligned) -->
+  <div class="connect-buttons">
+    <a href="https://www.linkedin.com/in/navanshmahajan/" target="_blank" class="connect-button linkedin">
+      <img src="Icons/Linkedin Icon.png" alt="LinkedIn"> LinkedIn
+    </a>
+    <a href="https://www.xing.com/profile/Navansh_Mahajan" target="_blank" class="connect-button xing">
+      <img src="Icons/Xing logo.svg" alt="Xing"> Xing
+    </a>
+  </div>
+</header>
+
+<!-- About Section -->
+<section id="about">
+  <h2>About Me</h2>
+  <p>I’m a seasoned professional with 14+ years of experience, specializing in Microsoft Power Platform to streamline workflows and boost business growth. I’m passionate about turning complex challenges into automation solutions, delivering results like cutting process times by 50% and doubling customer reach.
+    My focus is on leveraging technology to drive efficiency, security, and measurable value.<br>
+    
+    Want to know more about how I’ve transformed businesses? Check out my experience below or let’s connect to explore how I can support your goals!</p>
+</section>
+<!-- Skills Section -->
+<section id="skills">
+  <h2>Skills</h2>
+  <ul class="skills-list">
+    <li>Microsoft Power Automate</li>
+    <li>Microsoft Power Apps</li>
+    <li>Microsoft Power BI</li>
+    <li>Microsoft Dataverse</li>
+    <li>Power Pages</li>
+    <li>Power Fx</li>
+    <li>AI Builder</li>
+    <li>Copilot Studio</li>
+    <li>SharePoint</li>
+    <li>TypeScript</li>
+    <li>Microsoft Power Platform</li>
+    <li>Office 365</li>
+    <li>Project Management</li>
+    <li>Automation & RPA</li>
+    <li>Online Excel Scripting (Office Scripts)</li>
+  </ul>
+</section>
+<!-- Projects Section -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects-container">
+    <div class="project-card">
+      <h3>Enhanced Security & Streamlined Development</h3>
+      <p>Transformed a security-compromised Excel tool by migrating its logic to Power Apps with a secure SharePoint backend.</p>
     </div>
-  </header>
-
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p data-lang-en="I’m a seasoned professional with 14+ years of experience, specializing in Microsoft Power Platform to streamline workflows and boost business growth. I’ve delivered solutions like cutting process times by 50% and doubling customer reach. Let’s connect to explore how I can support your goals!" data-lang-de="Ich bin ein erfahrener Profi mit über 14 Jahren Erfahrung, spezialisiert auf Microsoft Power Platform, um Arbeitsabläufe zu optimieren und das Geschäftswachstum zu fördern. Ich habe Lösungen geliefert, die Prozesszeiten um 50% reduziert und die Kundenreichweite verdoppelt haben. Lassen Sie uns verbinden, um zu besprechen, wie ich Ihre Ziele unterstützen kann!">
-      I’m a seasoned professional with 14+ years of experience, specializing in Microsoft Power Platform to streamline workflows and boost business growth. I’ve delivered solutions like cutting process times by 50% and doubling customer reach. Let’s connect to explore how I can support your goals!
-    </p>
-    <a href="#contact" class="connect-button cta">Connect with Me</a>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>Microsoft Power Automate</li>
-      <li>Microsoft Power Apps</li>
-      <li>Microsoft Power BI</li>
-      <li>Microsoft Dataverse</li>
-      <li>Power Pages</li>
-      <li>Power Fx</li>
-      <li>AI Builder</li>
-      <li>Copilot Studio</li>
-      <li>SharePoint</li>
-      <li>TypeScript</li>
-      <li>Microsoft Power Platform</li>
-      <li>Office 365</li>
-      <li>Project Management</li>
-      <li>Automation & RPA</li>
-      <li>Online Excel Scripting</li>
-    </ul>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-container">
-      <div class="project-card">
-        <h3>Enhanced Security & Streamlined Development</h3>
-        <p>Migrated an Excel tool to Power Apps with a secure SharePoint backend.</p>
-        <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
-        <!-- Add project images here if available -->
-      </div>
-      <div class="project-card">
-        <h3>User Empowerment with Power Platform</h3>
-        <p>Reduced user inputs from 30 to 8 for faster quote generation.</p>
-        <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
-      </div>
-      <!-- Add more project cards as needed -->
+    <div class="project-card">
+      <h3>User Empowerment with Power Platform Integration</h3>
+      <p>Designed a user-friendly Power Platform integration that reduced user inputs from 30 to 8, resulting in faster quote generation.</p>
     </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <div class="contact-container">
-      <div class="contact-item"><strong>Email:</strong> navansh.mahajan@gmail.com</div>
+    <div class="project-card">
+      <h3>Reduced Power BI Data Security Risk</h3>
+      <p>Optimized Power Automate flow with advanced data operations, cutting synchronization time from 8 hours to 15 minutes.</p>
     </div>
-  </section>
+    <div class="project-card">
+      <h3>Automated Document Generation & CRM Integration</h3>
+      <p>Implemented Power Automate Word and Salesforce connectors to automate document creation, reducing manual effort.</p>
+    </div>
+    <div class="project-card">
+      <h3>Reduced Contract Processing Time with RPA</h3>
+      <p>Led Power Platform PoCs demonstrating RPA capabilities, resulting in adoption of Power Automate for contract processing.</p>
+    </div>
+    <div class="project-card">
+      <h3>Accelerated Development Lifecycle</h3>
+      <p>Replaced legacy SharePoint forms with Power Apps and introduced Power Automate, cutting development time by 50%.</p>
+    </div>
+    <div class="project-card">
+      <h3>Real-Time Pricing Solution</h3>
+      <p>Built a real-time pricing solution using Power Automate Gateway and SQL Server, reducing price discrepancies by 80%.</p>
+    </div>
+    <div class="project-card">
+      <h3>Expanded Customer Reach & Streamlined Quoting</h3>
+      <p>Developed a multi-configuration quoting system on Power Platform, eliminating limitations and boosting customer reach.</p>
+    </div>
+    <div class="project-card">
+      <h3>Automated Excel Scripting</h3>
+      <p>Utilized Office Scripts (TypeScript) to automate Excel actions, improving efficiency in routine tasks.</p>
+    </div>
+    <div class="project-card">
+      <h3>Interactive Power BI Dashboards</h3>
+      <p>Designed interactive Power BI dashboards for comprehensive solution reporting and informed decision-making.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Navansh Mahajan</p>
-  </footer>
 
-  <!-- JavaScript for Language Switcher -->
-  <script>
-    document.getElementById("language-switcher").addEventListener("change", function() {
-      let lang = this.value;
-      document.querySelectorAll("[data-lang-en]").forEach(el => {
-        el.textContent = el.getAttribute(`data-lang-${lang}`);
-      });
+<!-- Contact Section -->
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact-container">
+    <div class="contact-item"><strong>Email:</strong> navansh.mahajan@gmail.com</div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2024 Navansh Mahajan</p>
+</footer>
+
+<!-- JavaScript for Language Switcher -->
+<script>
+  document.getElementById("language-switcher").addEventListener("change", function() {
+    let lang = this.value;
+    document.querySelectorAll("[data-lang-en]").forEach(el => {
+      el.textContent = el.getAttribute(`data-lang-${lang}`);
     });
-  </script>
+  });
+</script>
+
 </body>
 </html>
