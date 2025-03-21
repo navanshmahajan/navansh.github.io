@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCF Updates</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .error-message {
+            background-color: #ffe6e6;
+            border: 1px solid #ff0000;
+            padding: 15px;
+            margin-bottom: 20px;
+            white-space: pre-wrap;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
+        .step-instruction {
+            background-color: #e8f5e9;
+            border: 1px solid #a5d6a7;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
+        .step-instruction strong {
+            display: block;
+            margin-bottom: 10px;
+            color: #2e7d32;
+        }
+
+        .step-instruction pre {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-size: 14px;
+            line-height: 1.4;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>PCF Updates</h1>
+
+    <div class="error-message">
+        [2:49:53 pm] [build] Failed:<br>
+        [pcf-1065] [Error] ESLint validation error:<br>
+        C:\repos\LinearInput\LinearInputControl\index.ts<br>
+        &nbsp; 16:15&nbsp; error&nbsp; Unexpected empty constructor&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; @typescript-eslint/no-empty-function<br>
+        &nbsp; 81:45&nbsp; error&nbsp; Unexpected any. Specify a different type&nbsp; @typescript-eslint/no-explicit-any<br><br>
+        ✖ 2 problems (2 errors, 0 warnings)
+    </div>
+
+    <div class="step-instruction">
+        <strong>Step 1. Change the file 'eslint.config.mjs' to include:</strong>
+        <pre>
+"rules": {
+    "no-unused-vars": "warn",
+    "no-undef": "off",
+    "@typescript-eslint/no-empty-function": "warn",
+    "@typescript-eslint/no-explicit-any": "warn"
+  }
+        </pre>
+    </div>
+
+</body>
+</html>
