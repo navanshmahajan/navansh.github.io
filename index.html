@@ -36,7 +36,7 @@
     /* Language Switcher */
     .language-switcher { padding: 5px; border-radius: 5px; cursor: pointer; }
 
-    /* Header */
+    /* Header Old
     header {
       background: linear-gradient(135deg, #0078d4, #00aaff);
       color: white;
@@ -46,53 +46,134 @@
     .header-content img {
       width: 120px; height: 120px; border-radius: 50%; border: 4px solid #fff;
     }
+*/
 
-    /* Power Platform Icons */
-    .power-icons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 10px;
-    }
-    .power-icons img {
-      width: 50px;
-      height: auto;
-      transition: transform 0.2s;
-    }
-    .power-icons img:hover {
-      transform: scale(1.1);
-    }
 
-    /* Connect Buttons */
-    .connect-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 10px;
-    }
-    .connect-button {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: #fff;
-      color: #0078d4;
-      padding: 10px 15px;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background 0.3s, transform 0.2s;
-      border: 2px solid transparent;
-    }
-    .connect-button img {
-      width: 25px;
-      height: auto;
-    }
-    .connect-button:hover {
-      background: #e6f2ff;
-      transform: scale(1.05);
-    }
-    .linkedin { border-color: #0077b5; }
-    .xing { border-color: #026466; color: #026466; }
+/* Header - Full Width */
+header {
+  background: linear-gradient(135deg, #0078d4, #00aaff);
+  color: white;
+  padding: 1rem 20px; /* Reduced height */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%; /* Full width */
+  margin: 0;
+  border-radius: 0; /* Remove rounded edges for full-width look */
+  flex-wrap: wrap;
+}
+
+/* Profile Image (Left-Aligned) */
+.header-image {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+}
+
+.header-image img {
+  width: 100px; /* Adjusted for better proportion */
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+/* Name & Title (Perfectly Centered) */
+.header-text {
+  flex: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-text h1 {
+  font-size: 1.8rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.header-text p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Power Platform Icons (Properly Centered) */
+.power-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.power-icons img {
+  width: 32px; /* Slightly smaller */
+  height: auto;
+  transition: transform 0.2s;
+}
+
+.power-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Connect Buttons (Smaller, Compact Height) */
+.connect-buttons {
+  
+  display: flex;
+  justify-content: flex-end; /* Align right */
+  gap: 8px;
+}
+
+.connect-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  color: #0078d4;
+  /*padding: 5px 10px; */
+  height: 35px; /* Reduced height */
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+  border: 2px solid transparent;
+  font-size: 0.85rem; /* Adjusted text size */
+}
+
+.connect-button img {
+  width:20px; /* Slightly smaller */
+  height: auto;
+}
+
+.connect-button:hover {
+  background: #e6f2ff;
+  transform: scale(1.05);
+}
+
+.linkedin { border-color: #0077b5; }
+.xing { border-color: #026466; color: #026466; }
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 10px;
+  }
+
+  .header-image {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .connect-buttons {
+    justify-content: center;
+  }
+}
+
+
+
 
     /* Sections */
     section { padding: 2rem; max-width: 1200px; margin: 2rem auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
@@ -169,10 +250,13 @@
 
 <!-- Header Section -->
 <header id="home">
-  <div class="header-content">
-    <img src="navansh_profile.jpg" alt="Navansh Mahajan">
-    <h1>Navansh Mahajan</h1>
-    <p>Digital Transformation Architect</p>
+  <!-- Profile Image (Left) -->
+  <div class="header-image">
+    <img src="docs/navansh_profile.jpg" alt="Navansh Mahajan">
+    <!-- Name & Title (Centered) -->
+    <div class="header-text">
+      <h1>Navansh Mahajan</h1>
+      <p>Digital Transformation Architect</p>
 
     <!-- Power Platform Icons -->
     <div class="power-icons">
@@ -181,23 +265,26 @@
       <img src="Icons/PowerBI_scalable.svg" alt="Power BI">
       <img src="Icons/PowerPlatform_scalable.svg" alt="Power Platform">
     </div>
+  </div>
 
-    <!-- Connect Buttons -->
-    <div class="connect-buttons">
-      <a href="https://www.linkedin.com/in/navanshmahajan/" target="_blank" class="connect-button linkedin">
-        <img src="Icons/Linkedin Icon.png" alt="LinkedIn"> LinkedIn
-      </a>
-      <a href="https://www.xing.com/profile/Navansh_Mahajan" target="_blank" class="connect-button xing">
-        <img src="Icons/Xing logo.svg" alt="Xing"> Xing
-      </a>
-    </div>
+    <!-- Connect Buttons (Left-Aligned) -->
+  <div class="connect-buttons">
+    <a href="https://www.linkedin.com/in/navanshmahajan/" target="_blank" class="connect-button linkedin">
+      <img src="Icons/Linkedin Icon.png" alt="LinkedIn"> LinkedIn
+    </a>
+    <a href="https://www.xing.com/profile/Navansh_Mahajan" target="_blank" class="connect-button xing">
+      <img src="Icons/Xing logo.svg" alt="Xing"> Xing
+    </a>
   </div>
 </header>
 
 <!-- About Section -->
 <section id="about">
   <h2>About Me</h2>
-  <p>I am an analytical thinker and problem solver with 14+ years of experience in automation solutions.</p>
+  <p>I’m a seasoned professional with 14+ years of experience, specializing in Microsoft Power Platform to streamline workflows and boost business growth. I’m passionate about turning complex challenges into automation solutions, delivering results like cutting process times by 50% and doubling customer reach.
+    My focus is on leveraging technology to drive efficiency, security, and measurable value.<br>
+    
+    Want to know more about how I’ve transformed businesses? Check out my experience below or let’s connect to explore how I can support your goals!</p>
 </section>
 <!-- Skills Section -->
 <section id="skills">
@@ -293,3 +380,6 @@
 
 </body>
 </html>
+<!-- End of HTML Document -->
+<!-- This is a simple personal webpage for Navansh Mahajan, showcasing his skills, projects, and contact information. The design is responsive and includes a navigation bar, header section with profile image, skills list, project cards, and a contact section. The page also features a language switcher for English and German. -->
+<!-- The CSS styles are included within the HTML for simplicity, and the JavaScript at the end handles the language switching functionality. -->
