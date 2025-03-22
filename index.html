@@ -18,6 +18,11 @@
       align-items: center;
       padding: 10px 20px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
     }
     nav ul {
       list-style: none;
@@ -40,6 +45,7 @@
 /* Header - Full Width */
 header {
   background: linear-gradient(135deg, #0078d4, #00aaff);
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0.7) 0%, transparent 70%);
   color: white;
   padding: 1rem 20px; /* Reduced height */
   display: flex;
@@ -47,6 +53,7 @@ header {
   justify-content: space-between;
   width: 100%; /* Full width */
   margin: 0;
+  margin-top: 60px;
   border-radius: 0; /* Remove rounded edges for full-width look */
   flex-wrap: wrap;
 }
@@ -68,6 +75,7 @@ header {
 /* Name & Title (Perfectly Centered) */
 .header-text {
   flex: 2;
+  
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -234,11 +242,26 @@ header {
 <!-- Navigation -->
 <nav>
   <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li>
+      <a href="#home" class="lang-content" data-lang="de" style="display: none;">Startseite</a>
+      <a href="#home" class="lang-content" data-lang="en">Home</a>
+    </li>
+    <li>
+      <a href="#about" class="lang-content" data-lang="de" style="display: none;">Über mich</a>
+      <a href="#about" class="lang-content" data-lang="en">About Me</a>
+    </li>
+    <li>
+      <a href="#skills" class="lang-content" data-lang="de" style="display: none;">Fähigkeiten</a>
+      <a href="#skills" class="lang-content" data-lang="en">Skills</a>
+    </li>
+    <li>
+      <a href="#projects" class="lang-content" data-lang="de" style="display: none;">Projekte</a>
+      <a href="#projects" class="lang-content" data-lang="en">Projects</a>
+    </li>
+    <li>
+      <a href="#contact" class="lang-content" data-lang="de" style="display: none;">Kontakt</a>
+      <a href="#contact" class="lang-content" data-lang="en">Contact</a>
+    </li>
   </ul>
 
   <!-- Language Switcher -->
@@ -312,7 +335,7 @@ header {
 </section>
 <!-- Skills Section -->
 <section id="skills">
-  <h2 class="lang-content" data-lang="de" style="display: none; text-align: center;">Fähigkeit</h2>
+  <h2 class="lang-content" data-lang="de" style="display: none; text-align: center;">Fähigkeiten</h2>
   <h2 class="lang-content" data-lang="en" style="text-align: center;">Skills</h2>
   
 
