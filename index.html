@@ -217,6 +217,19 @@ header {
     }
     .project-card:nth-child(even) { background: #e6f2ff; }
     .project-card:hover { transform: translateY(-5px); box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+    /* Project Skills Icons */
+.project-skills {
+  display: flex;
+  justify-content: left;
+  gap: 10px;
+  margin-top: 15px; /* Space above icons, pushes them to bottom */
+}
+
+.project-skills img {
+  width: 24px; /* Matches header and skills icons */
+  height: 24px;
+  object-fit: contain;
+}
 
     /* Contact */
     .contact-container {
@@ -361,69 +374,112 @@ header {
 
 <!-- Projects Section -->
 <section id="projects">
-  <h2 class="lang-content" data-lang="de" style="text-align: justify; display: none;text-align: center;">Projekte</h2>
-  <h2 class="lang-content" data-lang="en" style="text-align: justify;text-align: center;">Projects</h2>
-  
+  <h2 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Projekte</h2>
+  <h2 class="lang-content" data-lang="en" style="text-align: justify;">Projects</h2>
   <div class="projects-container">
-    <div class="project-card">
+    <div class="project-card" data-image="docs/CV Navansh Mahajan.pdf">
       <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Verbesserte Sicherheit und optimierte Entwicklung</h3>
       <h3 class="lang-content" data-lang="en" style="text-align: justify;">Enhanced Security & Streamlined Development</h3>
       <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Ein sicherheitskompromittiertes Excel-Tool wurde durch die Migration seiner Logik zu Power Apps mit einem sicheren SharePoint-Backend transformiert.</p>
       <p class="lang-content" data-lang="en" style="text-align: justify;">Transformed a security-compromised Excel tool by migrating its logic to Power Apps with a secure SharePoint backend.</p>
+      <div class="project-skills">
+        <img src="Icons/PowerApps_scalable.svg" alt="Power Apps">
+        <img src="Icons/SharePoint_icon.svg" alt="SharePoint">
+      </div>
     </div>
-    <div class="project-card">
+    
+    <div class="project-card" data-image="docs/navansh_profile.jpg">
       <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Benutzerermächtigung durch Power Platform-Integration</h3>
       <h3 class="lang-content" data-lang="en" style="text-align: justify;">User Empowerment with Power Platform Integration</h3>
       <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Eine benutzerfreundliche Power Platform-Integration wurde entworfen, die die Benutzereingaben von 30 auf 8 reduzierte und schnellere Angebotserstellungen ermöglichte.</p>
       <p class="lang-content" data-lang="en" style="text-align: justify;">Designed a user-friendly Power Platform integration that reduced user inputs from 30 to 8, resulting in faster quote generation.</p>
+      <div class="project-skills">
+        <img src="Icons/PowerPlatform_scalable.svg" alt="Power Platform">
+      </div>
     </div>
     <div class="project-card">
       <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Reduziertes Datensicherheitsrisiko in Power BI</h3>
       <h3 class="lang-content" data-lang="en" style="text-align: justify;">Reduced Power BI Data Security Risk</h3>
       <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Ein optimierter Power Automate-Flow mit erweiterten Datenoperationen verkürzte die Synchronisierungszeit von 8 Stunden auf 15 Minuten.</p>
       <p class="lang-content" data-lang="en" style="text-align: justify;">Optimized Power Automate flow with advanced data operations, cutting synchronization time from 8 hours to 15 minutes.</p>
+      <div class="project-skills">
+        <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate">
+        <img src="Icons/PowerBI_scalable.svg" alt="Power BI">
+      </div>
     </div>
+    <!-- Add similar <div class="project-skills"> to remaining project cards -->
     <div class="project-card">
       <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Automatisierte Dokumentengenerierung und CRM-Integration</h3>
       <h3 class="lang-content" data-lang="en" style="text-align: justify;">Automated Document Generation & CRM Integration</h3>
       <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Mit Power Automate Word- und Salesforce-Konnektoren wurde die Dokumentenerstellung automatisiert, wodurch manueller Aufwand reduziert wurde.</p>
       <p class="lang-content" data-lang="en" style="text-align: justify;">Implemented Power Automate Word and Salesforce connectors to automate document creation, reducing manual effort.</p>
+      <div class="project-skills">
+        <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate">
+      </div>
     </div>
     <div class="project-card">
       <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Reduzierte Vertragsbearbeitungszeit mit RPA</h3>
       <h3 class="lang-content" data-lang="en" style="text-align: justify;">Reduced Contract Processing Time with RPA</h3>
       <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Power Platform-PoCs zur Demonstration von RPA-Fähigkeiten wurden geleitet, was zur Einführung von Power Automate für die Vertragsbearbeitung führte.</p>
       <p class="lang-content" data-lang="en" style="text-align: justify;">Led Power Platform PoCs demonstrating RPA capabilities, resulting in adoption of Power Automate for contract processing.</p>
+      <div class="project-skills">
+        <img src="Icons/PowerPlatform_scalable.svg" alt="Power Platform">
+        <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate">
+      </div>
     </div>
     <div class="project-card">
       <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Beschleunigter Entwicklungszyklus</h3>
       <h3 class="lang-content" data-lang="en" style="text-align: justify;">Accelerated Development Lifecycle</h3>
       <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Alte SharePoint-Formulare wurden durch Power Apps ersetzt und Power Automate eingeführt, wodurch die Entwicklungszeit um 50 % gekürzt wurde.</p>
       <p class="lang-content" data-lang="en" style="text-align: justify;">Replaced legacy SharePoint forms with Power Apps and introduced Power Automate, cutting development time by 50%.</p>
+      <div class="project-skills">
+        <img src="Icons/PowerApps_scalable.svg" alt="Power Apps">
+        <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate">
+        <img src="Icons/SharePoint_icon.svg" alt="SharePoint">
+      </div>
     </div>
     <div class="project-card">
       <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Echtzeit-Preisgestaltungslösung</h3>
       <h3 class="lang-content" data-lang="en" style="text-align: justify;">Real-Time Pricing Solution</h3>
       <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Eine Echtzeit-Preisgestaltungslösung wurde mit Power Automate Gateway und SQL Server entwickelt, die Preisabweichungen um 80 % reduzierte.</p>
       <p class="lang-content" data-lang="en" style="text-align: justify;">Built a real-time pricing solution using Power Automate Gateway and SQL Server, reducing price discrepancies by 80%.</p>
+      <div class="project-skills">
+        <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate">
+      </div>
     </div>
     <div class="project-card">
       <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Erweiterte Kundenreichweite und optimierte Angebotserstellung</h3>
       <h3 class="lang-content" data-lang="en" style="text-align: justify;">Expanded Customer Reach & Streamlined Quoting</h3>
       <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Ein Mehrkonfigurations-Angebotssystem wurde auf der Power Platform entwickelt, das Einschränkungen beseitigte und die Kundenreichweite steigerte.</p>
       <p class="lang-content" data-lang="en" style="text-align: justify;">Developed a multi-configuration quoting system on Power Platform, eliminating limitations and boosting customer reach.</p>
+      <div class="project-skills">
+        <img src="Icons/PowerPlatform_scalable.svg" alt="Power Platform">
+      </div>
     </div>
     <div class="project-card">
       <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Automatisierte Excel-Skripterstellung</h3>
       <h3 class="lang-content" data-lang="en" style="text-align: justify;">Automated Excel Scripting</h3>
       <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Office Scripts (TypeScript) wurden genutzt, um Excel-Aktionen zu automatisieren und die Effizienz bei Routineaufgaben zu verbessern.</p>
       <p class="lang-content" data-lang="en" style="text-align: justify;">Utilized Office Scripts (TypeScript) to automate Excel actions, improving efficiency in routine tasks.</p>
+      <div class="project-skills">
+        <img src="Icons/Excel_icon.svg" alt="Excel">
+        <img src="Icons/TypeScript_icon.svg" alt="TypeScript">
+      </div>
     </div>
     <div class="project-card">
       <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Interaktive Power BI-Dashboards</h3>
       <h3 class="lang-content" data-lang="en" style="text-align: justify;">Interactive Power BI Dashboards</h3>
       <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Interaktive Power BI-Dashboards wurden für umfassende Lösungsberichte und fundierte Entscheidungsfindung entworfen.</p>
       <p class="lang-content" data-lang="en" style="text-align: justify;">Designed interactive Power BI dashboards for comprehensive solution reporting and informed decision-making.</p>
+      <div class="project-skills">
+        <img src="Icons/PowerBI_scalable.svg" alt="Power BI">
+      </div>
+    </div>
+  </div>
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">×</span>
+      <div id="modal-content-area"></div>
     </div>
   </div>
 </section>
@@ -443,29 +499,108 @@ header {
   <p>&copy; 2024 Navansh Mahajan</p>
 </footer>
 
-<!-- JavaScript for Language Switcher -->
+<!-- JavaScript for Language Switcher and Modal -->
 <script>
-  document.getElementById("language-switcher").addEventListener("change", function() {
-    let lang = this.value;
+  document.addEventListener('DOMContentLoaded', () => {
+    // Language Switcher
+    const languageSwitcher = document.getElementById("language-switcher");
+    if (!languageSwitcher) {
+      console.error("Language switcher not found!");
+      return;
+    }
 
-    // Toggle About section content
-    document.querySelectorAll(".lang-content").forEach(el => {
-      if (el.getAttribute("data-lang") === lang) {
-        el.style.display = "block";
-      } else {
-        el.style.display = "none";
-      }
+    languageSwitcher.addEventListener("change", function() {
+      const lang = this.value;
+      console.log("Language switched to:", lang);
+
+      // Toggle content visibility
+      document.querySelectorAll(".lang-content").forEach(el => {
+        if (el.getAttribute("data-lang") === lang) {
+          el.style.display = "block";
+        } else {
+          el.style.display = "none";
+        }
+      });
+
+      // Update text for elements with data-lang-en/de attributes
+      document.querySelectorAll("[data-lang-en]").forEach(el => {
+        el.textContent = el.getAttribute(`data-lang-${lang}`);
+      });
     });
 
-    // Update other elements with data-lang attributes (e.g., header title)
-    document.querySelectorAll("[data-lang-en]").forEach(el => {
-      el.textContent = el.getAttribute(`data-lang-${lang}`);
+    // Set default language to English
+    languageSwitcher.value = "en";
+    languageSwitcher.dispatchEvent(new Event("change"));
+
+    // Project Card Modal
+    const projectCards = document.querySelectorAll('.project-card');
+    if (projectCards.length === 0) {
+      console.error("No project cards found!");
+      return;
+    }
+
+    projectCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const modal = document.getElementById('project-modal');
+        const contentArea = document.getElementById('modal-content-area');
+        const filePath = card.getAttribute('data-image');
+
+        if (!modal || !contentArea) {
+          console.error("Modal or content area not found!");
+          return;
+        }
+
+        if (!filePath) {
+          console.error("No data-image attribute found on project card:", card);
+          return;
+        }
+
+        console.log("Opening modal with file:", filePath);
+
+        // Clear previous content
+        contentArea.innerHTML = '';
+
+        // Check file type and display
+        try {
+          if (filePath.endsWith('.pdf')) {
+            const iframe = document.createElement('iframe');
+            iframe.src = filePath;
+            contentArea.appendChild(iframe);
+          } else {
+            const img = document.createElement('img');
+            img.src = filePath;
+            img.alt = "Project preview";
+            contentArea.appendChild(img);
+          }
+
+          // Show modal
+          modal.style.display = 'block';
+        } catch (error) {
+          console.error("Error displaying file:", error);
+        }
+      });
     });
+
+    // Close modal on click
+    const closeModal = document.querySelector('.close-modal');
+    if (closeModal) {
+      closeModal.addEventListener('click', () => {
+        document.getElementById('project-modal').style.display = 'none';
+      });
+    } else {
+      console.error("Close modal button not found!");
+    }
+
+    // Close modal when clicking outside
+    const modal = document.getElementById('project-modal');
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+        }
+      });
+    }
   });
-
-  // Set default language to English on page load
-  document.getElementById("language-switcher").value = "en";
-  document.getElementById("language-switcher").dispatchEvent(new Event("change"));
 </script>
 
 </body>
