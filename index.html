@@ -230,6 +230,58 @@ header {
   height: 24px;
   object-fit: contain;
 }
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+}
+.modal-content {
+  position: relative;
+  margin: 5% auto; /* Reduced margin for more space */
+  padding: 20px;
+  background-color: #fff;
+  width: 90%; /* Increased width for better fit */
+  max-width: 900px; /* Slightly larger max-width */
+  max-height: 80vh; /* Limits height to 80% of viewport */
+  overflow-y: auto; /* Adds scrollbar if content overflows */
+  border-radius: 8px;
+  text-align: center;
+  box-sizing: border-box; /* Ensures padding doesn’t increase size */
+}
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #0078d4;
+}
+#modal-content-area {
+  width: 100%;
+  height: auto;
+  max-height: 70vh; /* Limits content height, leaving room for close button */
+  overflow: hidden; /* Prevents content from spilling out */
+}
+#modal-content-area img {
+  max-width: 100%; /* Ensures image doesn’t exceed container width */
+  max-height: 70vh; /* Caps image height to fit modal */
+  width: auto; /* Maintains aspect ratio */
+  height: auto;
+  display: block; /* Removes inline spacing */
+  margin: 0 auto; /* Centers image */
+}
+#modal-content-area iframe {
+  width: 100%;
+  height: 70vh; /* Matches max-height for consistency */
+  max-height: 70vh; /* Ensures PDF fits within modal */
+  border: none;
+  display: block; /* Ensures no extra spacing */
+}
 
     /* Contact */
     .contact-container {
@@ -491,6 +543,9 @@ header {
   <h2 class="lang-content" data-lang="en" style="text-align: justify;text-align: center;">Contact</h2>
   <div class="contact-container">
     <div class="contact-item"><strong>Email:</strong> navansh.mahajan@gmail.com</div>
+    <div class="contact-item"><strong>Phone:</strong> +4915253412345 / +919953128280 </div>
+    
+
   </div>
 </section>
 
