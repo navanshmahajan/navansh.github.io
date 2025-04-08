@@ -264,49 +264,40 @@
       object-fit: contain;
     }
 
-    /* Projects */
-    .projects-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
-    }
-
-    .project-card {
-      /* Line 208 */
-      background: #eae9e9;
-      /* Changed from #f0f7ff to match body background #dddddd */
+        /* Projects */
+        .projects-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    .project-card { /* Line 208 */
+      background: #dddddd;
       border-radius: 8px;
       padding: 1.5rem;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       transition: transform 0.3s;
       border: 1px solid #ccc;
-      /* Added subtle border for visibility */
+      position: relative; /* Contains absolute positioning */
+      overflow: visible; /* Ensures absolutely positioned child is visible */
+      min-height: 200px; /* Optional: Sets a minimum height to ensure space for icons */
     }
-
-    .project-card:nth-child(even) {
-      /* Line 211 */
+    .project-card:nth-child(even) { /* Line 211 */
       background: #dddddd;
-      /* Changed from #e6f2ff to match body background #dddddd */
     }
-
-    .project-card:hover {
-      /* Line 212 */
+    .project-card:hover { /* Line 212 */
       transform: translateY(-5px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-
     /* Project Skills Icons */
-    .project-skills {
+    .project-skills { /* Line 216 */
       display: flex;
       justify-content: left;
       gap: 10px;
-      margin-top: 15px;
-      /* Space above icons, pushes them to bottom */
+      position: absolute;
+      bottom: 0.5rem;
+      left: 1.5rem;
+      opacity: 1; /* Ensures icons are visible by default */
+      transition: opacity 0.3s; /* Smooth transition for hover effect (optional) */
     }
 
-    .project-skills img {
+    .project-skills img { /* Line 221 */
       width: 24px;
-      /* Matches header and skills icons */
       height: 24px;
       object-fit: contain;
     }
@@ -575,7 +566,7 @@
         </div>
       </div>
 
-      <div class="project-card" data-image="docs/navansh_profile.jpg">
+      <div class="project-card" data-image="docs/User Empowerment with Power Platform Integration.pdf">
         <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Benutzerermächtigung durch
           Power Platform-Integration</h3>
         <h3 class="lang-content" data-lang="en" style="text-align: justify;">User Empowerment with Power Platform
@@ -586,10 +577,11 @@
         <p class="lang-content" data-lang="en" style="text-align: justify;">Designed a user-friendly Power Platform
           integration that reduced user inputs from 30 to 8, resulting in faster quote generation.</p>
         <div class="project-skills">
-          <img src="Icons/PowerPlatform_scalable.svg" alt="Power Platform">
+          <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate">
+          <img src="Icons/PowerApps_scalable.svg" alt="Power Apps">
         </div>
       </div>
-      <div class="project-card">
+      <div class="project-card" data-image="docs/Reduced Power BI Data Security Risk.pdf">
         <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Reduziertes
           Datensicherheitsrisiko in Power BI</h3>
         <h3 class="lang-content" data-lang="en" style="text-align: justify;">Reduced Power BI Data Security Risk</h3>
@@ -603,7 +595,6 @@
           <img src="Icons/PowerBI_scalable.svg" alt="Power BI">
         </div>
       </div>
-      <!-- Add similar <div class="project-skills"> to remaining project cards -->
       <div class="project-card">
         <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Automatisierte
           Dokumentengenerierung und CRM-Integration</h3>
@@ -716,7 +707,7 @@
     <h2 class="lang-content" data-lang="en" style="text-align: justify;text-align: center;">Contact</h2>
     <div class="contact-container">
       <div class="contact-item"><strong>Email:</strong> navansh.mahajan@gmail.com</div>
-      <div class="contact-item"><strong>Phone:</strong> +4915253412345 / +919953128280 </div>
+      <div class="contact-item"><strong>Phone:</strong> +4915205675308 / +919953128280 </div>
 
 
     </div>
@@ -724,7 +715,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Navansh Mahajan</p>
+    <p>&copy; 2025 Navansh Mahajan</p>
   </footer>
 
   <!-- JavaScript for Language Switcher and Modal -->
