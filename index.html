@@ -230,6 +230,58 @@
       text-align: center;
     }
 
+    
+/* Certifications Styling */
+    .certs-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 10px;
+      padding: 10px 20px;
+      
+    }
+
+    .cert-card-new {
+      background-color: #e6f2ff; /* Matches skills list background */
+      margin: 10px;
+      border-radius: 20px;
+      padding: 10px 20px;      
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;        /* Required to pin the Open button */
+      cursor: default;           /* NO hand cursor on the card itself */
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .cert-card-new:hover {
+      transform: translateY(-5px); /* Pops up on hover */
+      box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+    }
+
+    .cert-card-new h3 {
+      color: #0078d4;            /* Matches skills list text color */
+      
+      font-weight: bold;         /* Made bold to match the skills list */
+      margin: 0;
+      text-shadow: none;         /* Removed the outline for a clean look */
+    }
+
+    .open-link {
+      position: absolute;
+      bottom: 3px;
+      right: 5px;
+      color: black;
+      padding: 0px 8px;
+      font-size: 11px;
+      text-decoration: underline;
+      cursor: pointer;           /* Hand cursor ONLY here */
+    }
+
+
+    
     /* Skills Section */
     .skills-list {
       list-style: none;
@@ -973,5 +1025,6 @@
 <!-- This is a simple personal webpage for Navansh Mahajan, showcasing his skills, projects, and contact information. The design is responsive and includes a navigation bar, header section with profile image, skills list, project cards, and a contact section. The page also features a language switcher for English and German. -->
 
 <!-- The CSS styles are included within the HTML for simplicity, and the JavaScript at the end handles the language switching functionality. -->
+
 
 
