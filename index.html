@@ -522,6 +522,34 @@
       how I can support your goals!
     </p>
   </section>
+<!--Certifications Section-->
+  <section id="certifications">
+    <h2 class="lang-content" data-lang="de" style="text-align: center; display: none;">Zertifizierungen</h2>
+    <h2 class="lang-content" data-lang="en" style="text-align: center;">Certifications</h2>
+
+    <div class="certs-container">
+      <div class="cert-card-new" data-image="docs/PL-400_Certificate.pdf">
+        <h3>PL-400</h3>
+        <span class="open-link">Open</span>
+      </div>
+      
+      <div class="cert-card-new" data-image="docs/PL-300_Certificate.pdf">
+        <h3>PL-300</h3>
+        <span class="open-link">Open</span>
+      </div>
+
+      <div class="cert-card-new" data-image="docs/PL-200_Certificate.pdf">
+        <h3>PL-200</h3>
+        <span class="open-link">Open</span>
+      </div>
+
+      <div class="cert-card-new" data-image="docs/Generative_AI_Certificate.pdf">
+        <h3>Generative AI</h3>
+        <span class="open-link">Open</span>
+      </div>
+    </div>
+  </section>
+  
   <!-- Skills Section -->
   <section id="skills">
     <h2 class="lang-content" data-lang="de" style="display: none; text-align: center;">Fähigkeiten</h2>
@@ -569,6 +597,7 @@
           <img src="Icons/SharePoint_icon.svg" alt="SharePoint">
           <img src="Icons/Excel_icon.svg" alt="Excel">
         </div>
+        <span class="open-link">Details</span>
       </div>
 
       <div class="project-card" data-image="docs/User Empowerment with Power Platform Integration.pdf">
@@ -585,6 +614,7 @@
           <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate">
           <img src="Icons/PowerApps_scalable.svg" alt="Power Apps">
         </div>
+        <span class="open-link">Details</span>
       </div>
       <div class="project-card" data-image="docs/Reduced Power BI Data Security Risk.pdf">
         <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Reduziertes
@@ -599,6 +629,7 @@
           <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate">
           <img src="Icons/PowerBI_scalable.svg" alt="Power BI">
         </div>
+        <span class="open-link">Details</span>
       </div>
       <div class="project-card">
         <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Automatisierte
@@ -613,6 +644,7 @@
         <div class="project-skills">
           <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate">
         </div>
+        <span class="open-link">Details</span>
       </div>
       <div class="project-card">
         <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Reduzierte
@@ -628,6 +660,7 @@
           <img src="Icons/PowerPlatform_scalable.svg" alt="Power Platform">
           <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate">
         </div>
+        <span class="open-link">Details</span>
       </div>
       <div class="project-card">
         <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Beschleunigter
@@ -643,6 +676,7 @@
           <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate">
           <img src="Icons/SharePoint_icon.svg" alt="SharePoint">
         </div>
+        <span class="open-link">Details</span>
       </div>
       <div class="project-card">
         <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">
@@ -656,6 +690,7 @@
         <div class="project-skills">
           <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate">
         </div>
+        <span class="open-link">Details</span>
       </div>
       <div class="project-card">
         <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Erweiterte Kundenreichweite
@@ -670,6 +705,7 @@
         <div class="project-skills">
           <img src="Icons/PowerPlatform_scalable.svg" alt="Power Platform">
         </div>
+        <span class="open-link">Details</span>
       </div>
       <div class="project-card">
         <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Automatisierte
@@ -683,6 +719,7 @@
           <img src="Icons/Excel_icon.svg" alt="Excel">
           <img src="Icons/TypeScript_icon.svg" alt="TypeScript">
         </div>
+        <span class="open-link">Details</span>
       </div>
       <div class="project-card">
         <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Interaktive Power
@@ -695,6 +732,7 @@
         <div class="project-skills">
           <img src="Icons/PowerBI_scalable.svg" alt="Power BI">
         </div>
+        <span class="open-link">Details</span>
       </div>
     </div>
     <div id="project-modal" class="modal">
@@ -720,10 +758,11 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Navansh Mahajan</p>
+    <p>&copy; 2026 Navansh Mahajan</p>
   </footer>
 
   <!-- JavaScript for Language Switcher and Modal -->
+ <!-- Old working Script
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       // Language Switcher
@@ -826,7 +865,107 @@
       }
     });
   </script>
+-->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Language Switcher
+      const languageSwitcher = document.getElementById("language-switcher");
+      if (!languageSwitcher) {
+        console.error("Language switcher not found!");
+        return;
+      }
 
+      languageSwitcher.addEventListener("change", function () {
+        const lang = this.value;
+        console.log("Language switched to:", lang);
+
+        // Toggle content visibility
+        document.querySelectorAll(".lang-content").forEach(el => {
+          if (el.getAttribute("data-lang") === lang) {
+            el.style.display = "block";
+          } else {
+            el.style.display = "none";
+          }
+        });
+
+        // Update text for elements with data-lang-en/de attributes
+        document.querySelectorAll("[data-lang-en]").forEach(el => {
+          el.textContent = el.getAttribute(`data-lang-${lang}`);
+        });
+      });
+
+      // Set default language to English
+      languageSwitcher.value = "en";
+      languageSwitcher.dispatchEvent(new Event("change"));
+
+      // Unified Modal Logic for Projects and Certifications
+      const clickableCards = document.querySelectorAll('.project-card, .cert-card-new');
+      if (clickableCards.length === 0) {
+        console.error("No cards found!");
+        return;
+      }
+
+      clickableCards.forEach(card => {
+        card.addEventListener('click', (e) => {
+          // CRITICAL: Only proceed if the user clicked exactly on the 'Open' or 'Details' link
+          if (!e.target.closest('.open-link')) {
+            return; 
+          }
+
+          const modal = document.getElementById('project-modal');
+          const contentArea = document.getElementById('modal-content-area');
+          const filePath = card.getAttribute('data-image');
+
+          if (!modal || !contentArea) {
+            console.error("Modal or content area not found!");
+            return;
+          }
+
+          if (!filePath) {
+            console.log("No document linked to this card yet.");
+            return;
+          }
+
+          // Clear previous content
+          contentArea.innerHTML = '';
+
+          // Check file type and display
+          if (filePath.endsWith('.pdf')) {
+            const iframe = document.createElement('iframe');
+            iframe.src = filePath;
+            contentArea.appendChild(iframe);
+          } else {
+            const img = document.createElement('img');
+            img.src = filePath;
+            img.alt = "Preview";
+            contentArea.appendChild(img);
+          }
+
+          // Show modal
+          modal.style.display = 'block';
+        });
+      });
+      // Close modal on click
+      const closeModal = document.querySelector('.close-modal');
+      if (closeModal) {
+        closeModal.addEventListener('click', () => {
+          document.getElementById('project-modal').style.display = 'none';
+        });
+      } else {
+        console.error("Close modal button not found!");
+      }
+
+      // Close modal when clicking outside
+      const modal = document.getElementById('project-modal');
+      if (modal) {
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            modal.style.display = 'none';
+          }
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>
@@ -834,4 +973,5 @@
 <!-- This is a simple personal webpage for Navansh Mahajan, showcasing his skills, projects, and contact information. The design is responsive and includes a navigation bar, header section with profile image, skills list, project cards, and a contact section. The page also features a language switcher for English and German. -->
 
 <!-- The CSS styles are included within the HTML for simplicity, and the JavaScript at the end handles the language switching functionality. -->
+
 
