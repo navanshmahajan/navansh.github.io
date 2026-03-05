@@ -336,6 +336,27 @@
       transform: translateY(-5px);
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
+    /* Styled identically to the certification 'Open' buttons */
+    .details-link {
+      position: absolute;
+      bottom: 12px;
+      right: 15px;
+      background-color: white;
+      color: #0078d4;
+      padding: 6px 12px;
+      font-size: 12px;
+      font-weight: bold;
+      border: 1px solid #0078d4;
+      border-radius: 4px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .project-card:hover .details-link {
+      background-color: #0078d4;
+      color: white;
+    }
     /* Project Skills Icons */
     .project-skills { /* Line 216 */
       display: flex;
@@ -654,7 +675,7 @@
           <img src="Icons/SharePoint_icon.svg" alt="SharePoint">
           <img src="Icons/Excel_icon.svg" alt="Excel">
         </div>
-        <span class="open-link">Details</span>
+        <span class="details-link">Details</span>
       </div>
 
       <div class="project-card" data-image="docs/User Empowerment with Power Platform Integration.pdf">
@@ -671,7 +692,7 @@
           <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate">
           <img src="Icons/PowerApps_scalable.svg" alt="Power Apps">
         </div>
-        <span class="open-link">Details</span>
+        <span class="details-link">Details</span>
       </div>
       <div class="project-card" data-image="docs/Reduced Power BI Data Security Risk.pdf">
         <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Reduziertes
@@ -686,7 +707,7 @@
           <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate">
           <img src="Icons/PowerBI_scalable.svg" alt="Power BI">
         </div>
-        <span class="open-link">Details</span>
+        <span class="details-link">Details</span>
       </div>
       <div class="project-card">
         <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Automatisierte
@@ -1030,6 +1051,7 @@
 <!-- This is a simple personal webpage for Navansh Mahajan, showcasing his skills, projects, and contact information. The design is responsive and includes a navigation bar, header section with profile image, skills list, project cards, and a contact section. The page also features a language switcher for English and German. -->
 
 <!-- The CSS styles are included within the HTML for simplicity, and the JavaScript at the end handles the language switching functionality. -->
+
 
 
 
