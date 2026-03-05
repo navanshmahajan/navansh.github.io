@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +19,6 @@
       margin: 0;
       padding: 0;
       background-color: #dddd;
-      /*#8d8e87c5;*/
       line-height: 1.2;
     }
 
@@ -68,24 +70,28 @@
       cursor: pointer;
     }
 
-
     /* Header - Full Width */
     header {
       background: linear-gradient(135deg, #0078d4, #00aaff);
       background: radial-gradient(circle at center, rgba(0, 0, 0, 0.7) 0%, transparent 70%);
       color: white;
       padding: 1rem 20px;
-      /* Reduced height */
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      /* Full width */
       margin: 0;
       margin-top: 60px;
       border-radius: 0;
-      /* Remove rounded edges for full-width look */
       flex-wrap: wrap;
+    }
+
+    .cv-button {
+      border-color: #444; 
+      color: #000;        
+      background: #f0f0f0;
+      text-decoration: none;
+      cursor: pointer; 
     }
 
     /* Profile Image (Left-Aligned) */
@@ -93,12 +99,10 @@
       flex: 1;
       display: flex;
       justify-content: center;
-      /* Center horizontally */
     }
 
     .header-image img {
       width: 100px;
-      /* Adjusted for better proportion */
       height: 100px;
       border-radius: 50%;
       border: 3px solid #fff;
@@ -107,14 +111,11 @@
     /* Name & Title (Perfectly Centered) */
     .header-text {
       flex: 2;
-
       text-align: center;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      /* Center vertically */
       align-items: center;
-      /* Center horizontally */
       margin-left: auto;
       margin-right: auto;
     }
@@ -130,32 +131,10 @@
       margin: 5px 0;
     }
 
-    /* Power Platform Icons (Properly Centered) */
-    .power-icons {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 8px;
-    }
-
-    .power-icons img {
-      width: 32px;
-      /* Slightly smaller */
-      height: auto;
-      transition: transform 0.2s;
-      background-color: white;
-    }
-
-    .power-icons img:hover {
-      transform: scale(1.1);
-    }
-
-    /* Connect Buttons (Smaller, Compact Height) */
+    /* Connect Buttons */
     .connect-buttons {
-
       display: flex;
       justify-content: flex-end;
-      /* Align right */
       gap: 8px;
     }
 
@@ -165,20 +144,17 @@
       gap: 6px;
       background: #fff;
       color: #0078d4;
-      padding: 0px 0px;
+      padding: 0px 8px;
       height: 35px;
-      /* Reduced height */
       border-radius: 5px;
       font-weight: bold;
       transition: background 0.3s, transform 0.2s;
       border: 2px solid transparent;
       font-size: 0.85rem;
-      /* Adjusted text size */
     }
 
     .connect-button img {
       width: 30px;
-      /* Slightly smaller */
       height: auto;
     }
 
@@ -187,14 +163,8 @@
       transform: scale(1.05);
     }
 
-    .linkedin {
-      border-color: #0077b5;
-    }
-
-    .xing {
-      border-color: #026466;
-      color: #026466;
-    }
+    .linkedin { border-color: #0077b5; }
+    .xing { border-color: #026466; color: #026466; }
 
     /* Responsive Tweaks */
     @media (max-width: 768px) {
@@ -203,17 +173,14 @@
         text-align: center;
         padding: 1rem 2rem;
       }
-
       .header-image {
         justify-content: center;
         margin-bottom: 10px;
       }
-
       .connect-buttons {
         justify-content: center;
       }
     }
-
 
     /* All Sections */
     section {
@@ -230,58 +197,55 @@
       text-align: center;
     }
 
-    
-/* Certifications Styling */
+    /* Certifications Styling (Matches Pill Mockup exactly) */
     .certs-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin: 10px;
-      padding: 10px 20px;
-      
+      gap: 15px;
+      margin: 10px auto;
+      padding: 20px;
+      max-width: 900px;
     }
 
     .cert-card-new {
-      background-color: #e6f2ff; /* Matches skills list background */
-      margin: 10px;
-      border-radius: 20px;
-      padding: 10px 20px;      
-      width: 200px;
+      background-color: #e6f2ff; 
+      border-radius: 50px;       
+      padding: 10px 25px;      
       display: flex;
-      justify-content: center;
+      flex-direction: row;       
       align-items: center;
-      position: relative;        /* Required to pin the Open button */
-      cursor: default;           /* NO hand cursor on the card itself */
+      justify-content: center;
+      gap: 8px;                  
+      cursor: default;           
       transition: transform 0.3s, box-shadow 0.3s;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
     .cert-card-new:hover {
-      transform: translateY(-5px); /* Pops up on hover */
-      box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+      transform: translateY(-3px); 
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
 
     .cert-card-new h3 {
-      color: #0078d4;            /* Matches skills list text color */
-      
-      font-weight: bold;         /* Made bold to match the skills list */
+      color: #0078d4;            
+      font-weight: bold;         
+      font-size: 1.1rem;
       margin: 0;
-      text-shadow: none;         /* Removed the outline for a clean look */
     }
 
     .open-link {
-      position: absolute;
-      bottom: 3px;
-      right: 5px;
-      color: black;
-      padding: 0px 8px;
-      font-size: 11px;
+      position: static;          
+      color: #333;               
+      font-size: 0.85rem;
+      text-decoration: none;
+      cursor: pointer;           
+      margin-top: 2px;
+    }
+    
+    .open-link:hover {
       text-decoration: underline;
-      cursor: pointer;           /* Hand cursor ONLY here */
     }
 
-
-    
     /* Skills Section */
     .skills-list {
       list-style: none;
@@ -302,13 +266,9 @@
       align-items: center;
       gap: 8px;
       transition: transform 0.2s;
-      /* Moved here from img */
     }
 
-    .skills-list li:hover {
-      transform: scale(1.1);
-      /* Applied to whole tile */
-    }
+    .skills-list li:hover { transform: scale(1.1); }
 
     .skills-list li img {
       width: 24px;
@@ -316,27 +276,27 @@
       object-fit: contain;
     }
 
-        /* Projects */
-        .projects-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-    .project-card { /* Line 208 */
+    /* Projects */
+    .projects-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+    
+    .project-card { 
       background: #dddddd;
       border-radius: 8px;
       padding: 1.5rem;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       transition: transform 0.3s;
       border: 1px solid #ccc;
-      position: relative; /* Contains absolute positioning */
-      overflow: visible; /* Ensures absolutely positioned child is visible */
-      min-height: 200px; /* Optional: Sets a minimum height to ensure space for icons */
+      position: relative; 
+      overflow: visible; 
+      min-height: 200px; 
     }
-    .project-card:nth-child(even) { /* Line 211 */
-      background: #dddddd;
-    }
-    .project-card:hover { /* Line 212 */
+    .project-card:nth-child(even) { background: #dddddd; }
+    .project-card:hover { 
       transform: translateY(-5px);
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-    /* Styled identically to the certification 'Open' buttons */
+    
+    /* Project 'Details' buttons */
     .details-link {
       position: absolute;
       bottom: 12px;
@@ -352,29 +312,30 @@
       cursor: pointer;
       transition: all 0.2s ease;
     }
-
     .project-card:hover .details-link {
       background-color: #0078d4;
       color: white;
     }
+    
     /* Project Skills Icons */
-    .project-skills { /* Line 216 */
+    .project-skills { 
       display: flex;
       justify-content: left;
       gap: 10px;
       position: absolute;
       bottom: 0.5rem;
       left: 1.5rem;
-      opacity: 1; /* Ensures icons are visible by default */
-      transition: opacity 0.3s; /* Smooth transition for hover effect (optional) */
+      opacity: 1; 
+      transition: opacity 0.3s; 
     }
 
-    .project-skills img { /* Line 221 */
+    .project-skills img { 
       width: 24px;
       height: 24px;
       object-fit: contain;
     }
 
+    /* Modal */
     .modal {
       display: none;
       position: fixed;
@@ -389,21 +350,15 @@
     .modal-content {
       position: relative;
       margin: 5% auto;
-      /* Reduced margin for more space */
       padding: 20px;
       background-color: #fff;
       width: 90%;
-      /* Increased width for better fit */
       max-width: 900px;
-      /* Slightly larger max-width */
       max-height: 80vh;
-      /* Limits height to 80% of viewport */
       overflow-y: auto;
-      /* Adds scrollbar if content overflows */
       border-radius: 8px;
       text-align: center;
       box-sizing: border-box;
-      /* Ensures padding doesn’t increase size */
     }
 
     .close-modal {
@@ -419,34 +374,24 @@
       width: 100%;
       height: auto;
       max-height: 70vh;
-      /* Limits content height, leaving room for close button */
       overflow: hidden;
-      /* Prevents content from spilling out */
     }
 
     #modal-content-area img {
       max-width: 100%;
-      /* Ensures image doesn’t exceed container width */
       max-height: 70vh;
-      /* Caps image height to fit modal */
       width: auto;
-      /* Maintains aspect ratio */
       height: auto;
       display: block;
-      /* Removes inline spacing */
       margin: 0 auto;
-      /* Centers image */
     }
 
     #modal-content-area iframe {
       width: 100%;
       height: 70vh;
-      /* Matches max-height for consistency */
       max-height: 70vh;
-      /* Ensures PDF fits within modal */
       border: none;
       display: block;
-      /* Ensures no extra spacing */
     }
 
     /* Contact */
@@ -472,23 +417,49 @@
       background-color: #ddd;
     }
 
-    /* Mobile Optimization */
     @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        text-align: center;
-      }
+      nav ul { flex-direction: column; text-align: center; }
+      .projects-container { grid-template-columns: 1fr; }
+    }
 
-      .projects-container {
-        grid-template-columns: 1fr;
-      }
+    /* Floating CV Emoji Button */
+    .floating-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #0078d4;
+      color: white;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 1001;
+      cursor: pointer;
+      opacity: 0;           
+      visibility: hidden;   
+      font-size: 24px;      
+      text-decoration: none;
+      transition: transform 0.3s ease, background-color 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .floating-btn:hover {
+      background-color: #005fa3;
+      transform: translateY(-5px); 
+      box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+    }
+
+    .floating-btn.show {
+      opacity: 1;
+      visibility: visible;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Navigation -->
   <nav>
     <ul>
       <li>
@@ -511,54 +482,29 @@
         <a href="#contact" class="lang-content" data-lang="de" style="display: none;">Kontakt</a>
         <a href="#contact" class="lang-content" data-lang="en">Contact</a>
       </li>
+      <li>
+        <a class="cv-modal-trigger lang-content" data-lang="en" data-image="docs/CV_Navansh_Mahajan.pdf" style="cursor: pointer;">CV</a>
+        <a class="cv-modal-trigger lang-content" data-lang="de" data-image="docs/CV_Navansh_Mahajan.pdf" style="cursor: pointer; display: none;">Lebenslauf</a>
+      </li>
     </ul>
 
-    <!-- Language Switcher -->
     <select class="language-switcher" id="language-switcher">
       <option value="en">🇬🇧 English</option>
       <option value="de">🇩🇪 Deutsch</option>
     </select>
   </nav>
 
-  <!-- Header Section -->
   <header id="home">
-    <!-- Profile Image (Left) -->
     <div class="header-image">
       <img src="docs/navansh_profile.jpg" alt="Navansh Mahajan">
-      <!-- Name & Title (Centered) -->
       <div class="header-text">
         <h1>Navansh Mahajan</h1>
-        <!--<p class="lang-content" style="text-align: justify;" data-lang="en">Digital Transformation Architect</p>
-        <p class="lang-content" style="text-align: justify;display: none;" data-lang="de">Digitalisierungsarchitekt</p>
-        -->
         <p class="lang-content" style="text-align: justify;" data-lang="en">Microsoft Power Platform Architect | Business Intelligence Lead</p>
         <p class="lang-content" style="text-align: justify;display: none;" data-lang="de">Microsoft Power Platform Architekt | Leiter Business Intelligence</p>
         <p class="lang-content" style="text-align: justify;" data-lang="en">Cologne NRW Germany</p>
         <p class="lang-content" style="text-align: justify;display: none;" data-lang="de">Köln NRW Deutschland</p>
-
-        <!-- Power Platform Icons -->
-        <!-- <div class="power-icons">
-      <img src="Icons/PowerPlatform_scalable.svg" alt="Power Platform" title="Power Platform">
-      <img src="Icons/PowerApps_scalable.svg" alt="PowerApps" title="PowerApps">
-      <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate" title="Power Automate">
-      <img src="Icons/PowerFx_scalable.svg" alt="Power Fx" title="Power Fx">
-      <img src="Icons/PowerBI_scalable.svg" alt="Power BI" title="Power BI">
-      <img src="Icons/PowerPages_scalable.svg" alt="Power Pages" title="Power Pages">
-      <img src="Icons/Dataverse_scalable.svg" alt="Dataverse" title="Dataverse">
-      <img src="Icons/AIBuilder_scalable.svg" alt="AI Builder" title="AI Builder">
-      <img src="Icons/CopilotStudio_scalable.svg" alt="Copilot Studio" title="Copilot Studio">
-      <img src="Icons/OfficeScripts_scalable.svg" alt="Office Scripts" title="Office Scripts">
-      <img src="Icons/SharePoint_scalable.svg" alt="SharePoint" title="SharePoint">
-      <img src="Icons/TypeScript_scalable.svg" alt="TypeScript" title="TypeScript">
-      <img src="Icons/Excel_scalable.svg" alt="Excel" title="Excel">
-      <img src="Icons/Office365_scalable.svg" alt="Office 365" title="Office 365">
-      
-
-      
-    </div> -->
       </div>
 
-      <!-- Connect Buttons (Left-Aligned) -->
       <div class="connect-buttons">
         <a href="https://www.linkedin.com/in/navanshmahajan/" target="_blank" class="connect-button linkedin">
           <img src="Icons/Linkedin Icon.png" alt="LinkedIn"> LinkedIn
@@ -566,36 +512,34 @@
         <a href="https://www.xing.com/profile/Navansh_Mahajan" target="_blank" class="connect-button xing">
           <img src="Icons/Xing logo.svg" alt="Xing"> Xing
         </a>
+        <a class="connect-button cv-button cv-modal-trigger" data-image="docs/CV_Navansh_Mahajan.pdf" title="View CV">
+          📜 
+          <span class="lang-content" data-lang="en">Download CV</span>
+          <span class="lang-content" data-lang="de" style="display: none;">Lebenslauf herunterladen</span>
+        </a>
       </div>
+    </div>
   </header>
 
-  <!-- About Section -->
   <section id="about">
-    <h2 class="lang-content" data-lang="de" style="text-align: justify; display: none;text-align: center;">Über Mich
-    </h2>
+    <h2 class="lang-content" data-lang="de" style="text-align: justify; display: none;text-align: center;">Über Mich</h2>
     <h2 class="lang-content" data-lang="en" style="text-align: justify; text-align: center;">About Me</h2>
-    <!-- About Section Data-->
     <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">
-      Ich bin ein erfahrener Profi mit mehr als 14 Jahren Erfahrung und spezialisiere mich auf die Microsoft Power
-      Platform, um Workflows zu optimieren und das Geschäftswachstum zu fördern.<br>
-      Ich bin leidenschaftlich daran interessiert, komplexe Herausforderungen in Automatisierungslösungen umzuwandeln
-      und Ergebnisse wie die Reduzierung der Prozesszeiten um 50 % und die Verdopplung der Kundenreichweite zu
-      erzielen.<br>
+      Ich bin ein erfahrener Experte mit über 15 Jahren Erfahrung und spezialisiere mich auf die Microsoft Power Platform, um Workflows zu optimieren und das Geschäftswachstum zu fördern.<br>
+      <strong>Ich lebe derzeit in Köln, besitze eine Chancenkarte (kein Visa-Sponsoring erforderlich) und lerne aktiv Deutsch (aktuell A2-Niveau).</strong><br>
+      Ich bin leidenschaftlich daran interessiert, komplexe Herausforderungen in Automatisierungslösungen umzuwandeln und Ergebnisse wie die Reduzierung der Prozesszeiten um 50 % und die Verdopplung der Kundenreichweite zu erzielen.<br>
       Mein Fokus liegt auf der Nutzung von Technologie, um Effizienz, Sicherheit und messbaren Wert zu steigern.<br><br>
-      Möchten Sie mehr darüber erfahren, wie ich Unternehmen transformiert habe? Schauen Sie sich meine Erfahrungen
-      unten an oder lassen Sie uns in Verbindung treten, um zu erkunden, wie ich Ihre Ziele unterstützen kann!
+      Möchten Sie mehr darüber erfahren, wie ich Unternehmen transformiert habe? Schauen Sie sich meine Erfahrungen unten an oder lassen Sie uns in Verbindung treten, um zu erkunden, wie ich Ihre Ziele unterstützen kann!
     </p>
     <p class="lang-content" data-lang="en" style="text-align: justify;">
-      I'm a seasoned professional with 14+ years of experience, specializing in Microsoft Power Platform to streamline
-      workflows and boost business growth.<br>
-      I'm passionate about turning complex challenges into automation solutions, delivering results like cutting process
-      times by 50% and doubling customer reach.<br>
+      I'm a seasoned professional with 15+ years of experience, specializing in Microsoft Power Platform to streamline workflows and boost business growth.<br>
+      <strong>Based in Cologne, Germany, I hold a Chancenkarte (no visa sponsorship required) and am actively learning German (currently A2 level).</strong><br>
+      I'm passionate about turning complex challenges into automation solutions, delivering results like cutting process times by 50% and doubling customer reach.<br>
       My focus is on leveraging technology to drive efficiency, security, and measurable value.<br><br>
-      Want to know more about how I've transformed businesses? Check out my experience below or let's connect to explore
-      how I can support your goals!
+      Want to know more about how I've transformed businesses? Check out my experience below or let's connect to explore how I can support your goals!
     </p>
   </section>
-<!--Certifications Section-->
+
   <section id="certifications">
     <h2 class="lang-content" data-lang="de" style="text-align: center; display: none;">Zertifizierungen</h2>
     <h2 class="lang-content" data-lang="en" style="text-align: center;">Certifications</h2>
@@ -628,13 +572,9 @@
     </div>
   </section>
   
-  <!-- Skills Section -->
   <section id="skills">
     <h2 class="lang-content" data-lang="de" style="display: none; text-align: center;">Fähigkeiten</h2>
     <h2 class="lang-content" data-lang="en" style="text-align: center;">Skills</h2>
-
-
-
     <ul class="skills-list">
       <li><img src="Icons/PowerPlatform_scalable.svg" alt="Power Platform Icon">Power Platform</li>
       <li><img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate Icon">Power Automate</li>
@@ -649,27 +589,19 @@
       <li><img src="Icons/CopilotStudio_scalable.svg" alt="Copilot Studio Icon">Copilot Studio</li>
       <li><img src="Icons/Microsoft365_icon.svg" alt="Microsoft 365 Icon">Office 365</li>
       <li><img src="Icons/Dataverse_scalable.svg" alt="Dataverse Icon">Dataverse</li>
-
     </ul>
   </section>
 
 
-  <!-- Projects Section -->
   <section id="projects">
     <h2 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Projekte</h2>
     <h2 class="lang-content" data-lang="en" style="text-align: justify;">Projects</h2>
     <div class="projects-container">
       <div class="project-card" data-image="docs/Enhanced Security & Streamlined Development.pdf">
-        <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Verbesserte Sicherheit und
-          optimierte Entwicklung</h3>
-        <h3 class="lang-content" data-lang="en" style="text-align: justify;">Enhanced Security & Streamlined Development
-        </h3>
-        <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Ein
-          sicherheitskompromittiertes Excel-Tool wurde durch die Migration seiner Logik zu Power Apps mit einem sicheren
-          SharePoint-Backend transformiert.</p>
+        <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Verbesserte Sicherheit und optimierte Entwicklung</h3>
+        <h3 class="lang-content" data-lang="en" style="text-align: justify;">Enhanced Security & Streamlined Development</h3>
+        <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Ein sicherheitskompromittiertes Excel-Tool wurde durch die Migration seiner Logik zu Power Apps mit einem sicheren SharePoint-Backend transformiert.</p>
         <p class="lang-content" data-lang="en" style="text-align: justify;">Expertly transformed a security-compromised Excel tool into a secure, streamlined application by leveraging Excel scripts, PowerApps, Power Automate, and SharePoint</p>
-          <!--<p class="lang-content" data-lang="en" style="text-align: justify;">Transformed a security-compromised Excel
-          tool by migrating its logic to Power Apps with a secure SharePoint backend.</p>-->
         <div class="project-skills">
           <img src="Icons/PowerApps_scalable.svg" alt="Power Apps">
           <img src="Icons/SharePoint_icon.svg" alt="SharePoint">
@@ -679,15 +611,10 @@
       </div>
 
       <div class="project-card" data-image="docs/User Empowerment with Power Platform Integration.pdf">
-        <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Benutzerermächtigung durch
-          Power Platform-Integration</h3>
-        <h3 class="lang-content" data-lang="en" style="text-align: justify;">User Empowerment with Power Platform
-          Integration</h3>
-        <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Eine benutzerfreundliche
-          Power Platform-Integration wurde entworfen, die die Benutzereingaben von 30 auf 8 reduzierte und schnellere
-          Angebotserstellungen ermöglichte.</p>
-        <p class="lang-content" data-lang="en" style="text-align: justify;">Designed a user-friendly Power Platform
-          integration that reduced user inputs from 30 to 8, resulting in faster quote generation.</p>
+        <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Benutzerermächtigung durch Power Platform-Integration</h3>
+        <h3 class="lang-content" data-lang="en" style="text-align: justify;">User Empowerment with Power Platform Integration</h3>
+        <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Eine benutzerfreundliche Power Platform-Integration wurde entworfen, die die Benutzereingaben von 30 auf 8 reduzierte und schnellere Angebotserstellungen ermöglichte.</p>
+        <p class="lang-content" data-lang="en" style="text-align: justify;">Designed a user-friendly Power Platform integration that reduced user inputs from 30 to 8, resulting in faster quote generation.</p>
         <div class="project-skills">
           <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate">
           <img src="Icons/PowerApps_scalable.svg" alt="Power Apps">
@@ -695,14 +622,10 @@
         <span class="details-link">Details</span>
       </div>
       <div class="project-card" data-image="docs/Reduced Power BI Data Security Risk.pdf">
-        <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Reduziertes
-          Datensicherheitsrisiko in Power BI</h3>
+        <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Reduziertes Datensicherheitsrisiko in Power BI</h3>
         <h3 class="lang-content" data-lang="en" style="text-align: justify;">Reduced Power BI Data Security Risk</h3>
-        <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Ein optimierter Power
-          Automate-Flow mit erweiterten Datenoperationen verkürzte die Synchronisierungszeit von 8 Stunden auf 15
-          Minuten.</p>
-        <p class="lang-content" data-lang="en" style="text-align: justify;">Optimized Power Automate flow with advanced
-          data operations, cutting synchronization time from 8 hours to 15 minutes.</p>
+        <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Ein optimierter Power Automate-Flow mit erweiterten Datenoperationen verkürzte die Synchronisierungszeit von 8 Stunden auf 15 Minuten.</p>
+        <p class="lang-content" data-lang="en" style="text-align: justify;">Optimized Power Automate flow with advanced data operations, cutting synchronization time from 8 hours to 15 minutes.</p>
         <div class="project-skills">
           <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate">
           <img src="Icons/PowerBI_scalable.svg" alt="Power BI">
@@ -710,109 +633,81 @@
         <span class="details-link">Details</span>
       </div>
       <div class="project-card">
-        <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Automatisierte
-          Dokumentengenerierung und CRM-Integration</h3>
-        <h3 class="lang-content" data-lang="en" style="text-align: justify;">Automated Document Generation & CRM
-          Integration</h3>
-        <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Mit Power Automate Word- und
-          Salesforce-Konnektoren wurde die Dokumentenerstellung automatisiert, wodurch manueller Aufwand reduziert
-          wurde.</p>
-        <p class="lang-content" data-lang="en" style="text-align: justify;">Implemented Power Automate Word and
-          Salesforce connectors to automate document creation, reducing manual effort.</p>
+        <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Automatisierte Dokumentengenerierung und CRM-Integration</h3>
+        <h3 class="lang-content" data-lang="en" style="text-align: justify;">Automated Document Generation & CRM Integration</h3>
+        <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Mit Power Automate Word- und Salesforce-Konnektoren wurde die Dokumentenerstellung automatisiert, wodurch manueller Aufwand reduziert wurde.</p>
+        <p class="lang-content" data-lang="en" style="text-align: justify;">Implemented Power Automate Word and Salesforce connectors to automate document creation, reducing manual effort.</p>
         <div class="project-skills">
           <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate">
         </div>
-        <span class="open-link">Details</span>
+        <span class="details-link">Details</span>
       </div>
       <div class="project-card">
-        <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Reduzierte
-          Vertragsbearbeitungszeit mit RPA</h3>
-        <h3 class="lang-content" data-lang="en" style="text-align: justify;">Reduced Contract Processing Time with RPA
-        </h3>
-        <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Power Platform-PoCs zur
-          Demonstration von RPA-Fähigkeiten wurden geleitet, was zur Einführung von Power Automate für die
-          Vertragsbearbeitung führte.</p>
-        <p class="lang-content" data-lang="en" style="text-align: justify;">Led Power Platform PoCs demonstrating RPA
-          capabilities, resulting in adoption of Power Automate for contract processing.</p>
+        <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Reduzierte Vertragsbearbeitungszeit mit RPA</h3>
+        <h3 class="lang-content" data-lang="en" style="text-align: justify;">Reduced Contract Processing Time with RPA</h3>
+        <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Power Platform-PoCs zur Demonstration von RPA-Fähigkeiten wurden geleitet, was zur Einführung von Power Automate für die Vertragsbearbeitung führte.</p>
+        <p class="lang-content" data-lang="en" style="text-align: justify;">Led Power Platform PoCs demonstrating RPA capabilities, resulting in adoption of Power Automate for contract processing.</p>
         <div class="project-skills">
           <img src="Icons/PowerPlatform_scalable.svg" alt="Power Platform">
           <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate">
         </div>
-        <span class="open-link">Details</span>
+        <span class="details-link">Details</span>
       </div>
       <div class="project-card">
-        <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Beschleunigter
-          Entwicklungszyklus</h3>
+        <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Beschleunigter Entwicklungszyklus</h3>
         <h3 class="lang-content" data-lang="en" style="text-align: justify;">Accelerated Development Lifecycle</h3>
-        <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Alte SharePoint-Formulare
-          wurden durch Power Apps ersetzt und Power Automate eingeführt, wodurch die Entwicklungszeit um 50 % gekürzt
-          wurde.</p>
-        <p class="lang-content" data-lang="en" style="text-align: justify;">Replaced legacy SharePoint forms with Power
-          Apps and introduced Power Automate, cutting development time by 50%.</p>
+        <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Alte SharePoint-Formulare wurden durch Power Apps ersetzt und Power Automate eingeführt, wodurch die Entwicklungszeit um 50 % gekürzt wurde.</p>
+        <p class="lang-content" data-lang="en" style="text-align: justify;">Replaced legacy SharePoint forms with Power Apps and introduced Power Automate, cutting development time by 50%.</p>
         <div class="project-skills">
           <img src="Icons/PowerApps_scalable.svg" alt="Power Apps">
           <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate">
           <img src="Icons/SharePoint_icon.svg" alt="SharePoint">
         </div>
-        <span class="open-link">Details</span>
+        <span class="details-link">Details</span>
       </div>
       <div class="project-card">
-        <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">
-          Echtzeit-Preisgestaltungslösung</h3>
+        <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Echtzeit-Preisgestaltungslösung</h3>
         <h3 class="lang-content" data-lang="en" style="text-align: justify;">Real-Time Pricing Solution</h3>
-        <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Eine
-          Echtzeit-Preisgestaltungslösung wurde mit Power Automate Gateway und SQL Server entwickelt, die
-          Preisabweichungen um 80 % reduzierte.</p>
-        <p class="lang-content" data-lang="en" style="text-align: justify;">Built a real-time pricing solution using
-          Power Automate Gateway and SQL Server, reducing price discrepancies by 80%.</p>
+        <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Eine Echtzeit-Preisgestaltungslösung wurde mit Power Automate Gateway und SQL Server entwickelt, die Preisabweichungen um 80 % reduzierte.</p>
+        <p class="lang-content" data-lang="en" style="text-align: justify;">Built a real-time pricing solution using Power Automate Gateway and SQL Server, reducing price discrepancies by 80%.</p>
         <div class="project-skills">
           <img src="Icons/PowerAutomate_scalable.svg" alt="Power Automate">
         </div>
-        <span class="open-link">Details</span>
+        <span class="details-link">Details</span>
       </div>
       <div class="project-card">
-        <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Erweiterte Kundenreichweite
-          und optimierte Angebotserstellung</h3>
-        <h3 class="lang-content" data-lang="en" style="text-align: justify;">Expanded Customer Reach & Streamlined
-          Quoting</h3>
-        <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Ein
-          Mehrkonfigurations-Angebotssystem wurde auf der Power Platform entwickelt, das Einschränkungen beseitigte und
-          die Kundenreichweite steigerte.</p>
-        <p class="lang-content" data-lang="en" style="text-align: justify;">Developed a multi-configuration quoting
-          system on Power Platform, eliminating limitations and boosting customer reach.</p>
+        <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Erweiterte Kundenreichweite und optimierte Angebotserstellung</h3>
+        <h3 class="lang-content" data-lang="en" style="text-align: justify;">Expanded Customer Reach & Streamlined Quoting</h3>
+        <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Ein Mehrkonfigurations-Angebotssystem wurde auf der Power Platform entwickelt, das Einschränkungen beseitigte und die Kundenreichweite steigerte.</p>
+        <p class="lang-content" data-lang="en" style="text-align: justify;">Developed a multi-configuration quoting system on Power Platform, eliminating limitations and boosting customer reach.</p>
         <div class="project-skills">
           <img src="Icons/PowerPlatform_scalable.svg" alt="Power Platform">
         </div>
-        <span class="open-link">Details</span>
+        <span class="details-link">Details</span>
       </div>
       <div class="project-card">
-        <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Automatisierte
-          Excel-Skripterstellung</h3>
+        <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Automatisierte Excel-Skripterstellung</h3>
         <h3 class="lang-content" data-lang="en" style="text-align: justify;">Automated Excel Scripting</h3>
-        <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Office Scripts (TypeScript)
-          wurden genutzt, um Excel-Aktionen zu automatisieren und die Effizienz bei Routineaufgaben zu verbessern.</p>
-        <p class="lang-content" data-lang="en" style="text-align: justify;">Utilized Office Scripts (TypeScript) to
-          automate Excel actions, improving efficiency in routine tasks.</p>
+        <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Office Scripts (TypeScript) wurden genutzt, um Excel-Aktionen zu automatisieren und die Effizienz bei Routineaufgaben zu verbessern.</p>
+        <p class="lang-content" data-lang="en" style="text-align: justify;">Utilized Office Scripts (TypeScript) to automate Excel actions, improving efficiency in routine tasks.</p>
         <div class="project-skills">
           <img src="Icons/Excel_icon.svg" alt="Excel">
           <img src="Icons/TypeScript_icon.svg" alt="TypeScript">
         </div>
-        <span class="open-link">Details</span>
+        <span class="details-link">Details</span>
       </div>
       <div class="project-card">
-        <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Interaktive Power
-          BI-Dashboards</h3>
+        <h3 class="lang-content" data-lang="de" style="text-align: justify; display: none;">Interaktive Power BI-Dashboards</h3>
         <h3 class="lang-content" data-lang="en" style="text-align: justify;">Interactive Power BI Dashboards</h3>
-        <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Interaktive Power
-          BI-Dashboards wurden für umfassende Lösungsberichte und fundierte Entscheidungsfindung entworfen.</p>
-        <p class="lang-content" data-lang="en" style="text-align: justify;">Designed interactive Power BI dashboards for
-          comprehensive solution reporting and informed decision-making.</p>
+        <p class="lang-content" data-lang="de" style="text-align: justify; display: none;">Interaktive Power BI-Dashboards wurden für umfassende Lösungsberichte und fundierte Entscheidungsfindung entworfen.</p>
+        <p class="lang-content" data-lang="en" style="text-align: justify;">Designed interactive Power BI dashboards for comprehensive solution reporting and informed decision-making.</p>
         <div class="project-skills">
           <img src="Icons/PowerBI_scalable.svg" alt="Power BI">
         </div>
-        <span class="open-link">Details</span>
+        <span class="details-link">Details</span>
       </div>
     </div>
+    
     <div id="project-modal" class="modal">
       <div class="modal-content">
         <span class="close-modal">×</span>
@@ -821,88 +716,83 @@
     </div>
   </section>
 
-
-  <!-- Contact Section -->
   <section id="contact">
     <h2 class="lang-content" data-lang="de" style="text-align: justify; display: none;text-align: center;">Kontakt</h2>
     <h2 class="lang-content" data-lang="en" style="text-align: justify;text-align: center;">Contact</h2>
     <div class="contact-container">
-      <div class="contact-item"><strong>Email:</strong>navansh.mahajan@gmail.com</div>
-      <div class="contact-item"><strong>Phone:</strong>+4915122243080</div>
-
-
+      <div class="contact-item"><strong>Location:</strong> Cologne, Germany (NRW)</div>
+      <div class="contact-item"><strong>Email:</strong> navansh.mahajan@gmail.com</div>
+      <div class="contact-item"><strong>Phone:</strong> +4915122243080</div>
     </div>
   </section>
-
-  <!-- Footer -->
+  
+  <a id="floating-cv-btn" class="floating-btn cv-modal-trigger" data-image="docs/CV_Navansh_Mahajan.pdf" title="View CV">
+    📜 
+  </a>
+  
   <footer>
     <p>&copy; 2026 Navansh Mahajan</p>
   </footer>
 
-  <!-- JavaScript for Language Switcher and Modal -->
- <!-- Old working Script
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Language Switcher
+      // 1. Language Switcher Logic
       const languageSwitcher = document.getElementById("language-switcher");
-      if (!languageSwitcher) {
-        console.error("Language switcher not found!");
-        return;
+      if (languageSwitcher) {
+        languageSwitcher.addEventListener("change", function () {
+          const lang = this.value;
+          document.querySelectorAll(".lang-content").forEach(el => {
+            if (el.getAttribute("data-lang") === lang) {
+              el.style.display = "block";
+            } else {
+              el.style.display = "none";
+            }
+          });
+          document.querySelectorAll("[data-lang-en]").forEach(el => {
+            el.textContent = el.getAttribute(`data-lang-${lang}`);
+          });
+        });
+        languageSwitcher.value = "en";
+        languageSwitcher.dispatchEvent(new Event("change"));
       }
 
-      languageSwitcher.addEventListener("change", function () {
-        const lang = this.value;
-        console.log("Language switched to:", lang);
-
-        // Toggle content visibility
-        document.querySelectorAll(".lang-content").forEach(el => {
-          if (el.getAttribute("data-lang") === lang) {
-            el.style.display = "block";
+      // 2. Floating CV Button Scroll Logic
+      const floatingBtn = document.getElementById('floating-cv-btn');
+      if (floatingBtn) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 200) {
+            floatingBtn.classList.add('show');
           } else {
-            el.style.display = "none";
+            floatingBtn.classList.remove('show');
           }
         });
-
-        // Update text for elements with data-lang-en/de attributes
-        document.querySelectorAll("[data-lang-en]").forEach(el => {
-          el.textContent = el.getAttribute(`data-lang-${lang}`);
-        });
-      });
-
-      // Set default language to English
-      languageSwitcher.value = "en";
-      languageSwitcher.dispatchEvent(new Event("change"));
-
-      // Project Card Modal
-      const projectCards = document.querySelectorAll('.project-card');
-      if (projectCards.length === 0) {
-        console.error("No project cards found!");
-        return;
       }
 
-      projectCards.forEach(card => {
-        card.addEventListener('click', () => {
-          const modal = document.getElementById('project-modal');
-          const contentArea = document.getElementById('modal-content-area');
-          const filePath = card.getAttribute('data-image');
+      // 3. Unified Modal Logic (Projects, Certifications, and CV)
+      const clickableCards = document.querySelectorAll('.project-card, .cert-card-new, .cv-modal-trigger');
+      const modal = document.getElementById('project-modal');
+      const contentArea = document.getElementById('modal-content-area');
+      const closeModal = document.querySelector('.close-modal');
 
-          if (!modal || !contentArea) {
-            console.error("Modal or content area not found!");
-            return;
-          }
+      if (clickableCards.length > 0 && modal && contentArea) {
+        clickableCards.forEach(card => {
+          card.addEventListener('click', (e) => {
+            
+            // Check if this is the CV button
+            const isCVButton = card.classList.contains('cv-modal-trigger');
 
-          if (!filePath) {
-            console.error("No data-image attribute found on project card:", card);
-            return;
-          }
+            // IF it is a project or cert card, STOP unless they explicitly clicked the Open/Details link
+            if (!isCVButton && !e.target.closest('.open-link') && !e.target.closest('.details-link')) {
+              return; 
+            }
 
-          console.log("Opening modal with file:", filePath);
+            const filePath = card.getAttribute('data-image');
+            if (!filePath) return;
 
-          // Clear previous content
-          contentArea.innerHTML = '';
+            // Clear previous content
+            contentArea.innerHTML = '';
 
-          // Check file type and display
-          try {
+            // Check file type and display inside modal
             if (filePath.endsWith('.pdf')) {
               const iframe = document.createElement('iframe');
               iframe.src = filePath;
@@ -910,131 +800,24 @@
             } else {
               const img = document.createElement('img');
               img.src = filePath;
-              img.alt = "Project preview";
+              img.alt = "Preview";
               contentArea.appendChild(img);
             }
 
             // Show modal
             modal.style.display = 'block';
-          } catch (error) {
-            console.error("Error displaying file:", error);
-          }
+          });
         });
-      });
+      }
 
-      // Close modal on click
-      const closeModal = document.querySelector('.close-modal');
+      // 4. Close Modal Logic
       if (closeModal) {
         closeModal.addEventListener('click', () => {
-          document.getElementById('project-modal').style.display = 'none';
-        });
-      } else {
-        console.error("Close modal button not found!");
-      }
-
-      // Close modal when clicking outside
-      const modal = document.getElementById('project-modal');
-      if (modal) {
-        modal.addEventListener('click', (e) => {
-          if (e.target === modal) {
-            modal.style.display = 'none';
-          }
+          modal.style.display = 'none';
         });
       }
-    });
-  </script>
--->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      // Language Switcher
-      const languageSwitcher = document.getElementById("language-switcher");
-      if (!languageSwitcher) {
-        console.error("Language switcher not found!");
-        return;
-      }
 
-      languageSwitcher.addEventListener("change", function () {
-        const lang = this.value;
-        console.log("Language switched to:", lang);
-
-        // Toggle content visibility
-        document.querySelectorAll(".lang-content").forEach(el => {
-          if (el.getAttribute("data-lang") === lang) {
-            el.style.display = "block";
-          } else {
-            el.style.display = "none";
-          }
-        });
-
-        // Update text for elements with data-lang-en/de attributes
-        document.querySelectorAll("[data-lang-en]").forEach(el => {
-          el.textContent = el.getAttribute(`data-lang-${lang}`);
-        });
-      });
-
-      // Set default language to English
-      languageSwitcher.value = "en";
-      languageSwitcher.dispatchEvent(new Event("change"));
-
-      // Unified Modal Logic for Projects and Certifications
-      const clickableCards = document.querySelectorAll('.project-card, .cert-card-new');
-      if (clickableCards.length === 0) {
-        console.error("No cards found!");
-        return;
-      }
-
-      clickableCards.forEach(card => {
-        card.addEventListener('click', (e) => {
-          // CRITICAL: Only proceed if the user clicked exactly on the 'Open' or 'Details' link
-          if (!e.target.closest('.open-link') && !e.target.closest('.details-link')) {
-            return; 
-          }
-
-          const modal = document.getElementById('project-modal');
-          const contentArea = document.getElementById('modal-content-area');
-          const filePath = card.getAttribute('data-image');
-
-          if (!modal || !contentArea) {
-            console.error("Modal or content area not found!");
-            return;
-          }
-
-          if (!filePath) {
-            console.log("No document linked to this card yet.");
-            return;
-          }
-
-          // Clear previous content
-          contentArea.innerHTML = '';
-
-          // Check file type and display
-          if (filePath.endsWith('.pdf')) {
-            const iframe = document.createElement('iframe');
-            iframe.src = filePath;
-            contentArea.appendChild(iframe);
-          } else {
-            const img = document.createElement('img');
-            img.src = filePath;
-            img.alt = "Preview";
-            contentArea.appendChild(img);
-          }
-
-          // Show modal
-          modal.style.display = 'block';
-        });
-      });
-      // Close modal on click
-      const closeModal = document.querySelector('.close-modal');
-      if (closeModal) {
-        closeModal.addEventListener('click', () => {
-          document.getElementById('project-modal').style.display = 'none';
-        });
-      } else {
-        console.error("Close modal button not found!");
-      }
-
-      // Close modal when clicking outside
-      const modal = document.getElementById('project-modal');
+      // Close modal when clicking outside the PDF/Image
       if (modal) {
         modal.addEventListener('click', (e) => {
           if (e.target === modal) {
@@ -1045,12 +828,12 @@
     });
   </script>
 </body>
-
 </html>
 <!-- End of HTML Document -->
 <!-- This is a simple personal webpage for Navansh Mahajan, showcasing his skills, projects, and contact information. The design is responsive and includes a navigation bar, header section with profile image, skills list, project cards, and a contact section. The page also features a language switcher for English and German. -->
 
 <!-- The CSS styles are included within the HTML for simplicity, and the JavaScript at the end handles the language switching functionality. -->
+
 
 
 
