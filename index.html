@@ -91,23 +91,16 @@
       cursor: pointer; 
     }
 
-    /* Profile Image (Left-Aligned) */
+   /* Profile Image (Left-Aligned) */
     .header-image {
-      flex: 1;
+      flex: 1; /* Balances the left side */
       display: flex;
-      justify-content: center;
-    }
-
-    .header-image img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      border: 3px solid #fff;
+      justify-content: flex-start; /* Keeps image pinned left */
     }
 
     /* Name & Title (Perfectly Centered) */
     .header-text {
-      flex: 2;
+      flex: 2; /* Takes up the middle space evenly */
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -117,19 +110,9 @@
       margin-right: auto;
     }
 
-    .header-text h1 {
-      font-size: 1.8rem;
-      margin: 0;
-      font-weight: bold;
-    }
-
-    .header-text p {
-      font-size: 1rem;
-      margin: 5px 0;
-    }
-
     /* Connect Buttons */
     .connect-buttons {
+      flex: 1; /* Balances the right side, keeping text dead center */
       display: flex;
       justify-content: flex-end;
       gap: 8px;
@@ -480,8 +463,8 @@
         <a href="#contact" class="lang-content" data-lang="en">Contact</a>
       </li>
       <li>
-        <a class="cv-modal-trigger lang-content" data-lang="en" data-image="docs/CV_Navansh_Mahajan.pdf" style="cursor: pointer;">CV</a>
-        <a class="cv-modal-trigger lang-content" data-lang="de" data-image="docs/CV_Navansh_Mahajan.pdf" style="cursor: pointer; display: none;">Lebenslauf</a>
+        <a class="cv-modal-trigger lang-content" data-lang="en" data-image="docs/CV Navansh Mahajan.pdf" style="cursor: pointer;">CV</a>
+        <a class="cv-modal-trigger lang-content" data-lang="de" data-image="docs/CV Navansh Mahajan.pdf" style="cursor: pointer; display: none;">Lebenslauf</a>
       </li>
     </ul>
 
@@ -492,30 +475,31 @@
   </nav>
 
   <header id="home">
+    
     <div class="header-image">
       <img src="docs/navansh_profile.jpg" alt="Navansh Mahajan">
-      <div class="header-text">
-        <h1>Navansh Mahajan</h1>
-        <p class="lang-content" style="text-align: justify;" data-lang="en">Microsoft Power Platform Architect | Business Intelligence Lead</p>
-        <p class="lang-content" style="text-align: justify;display: none;" data-lang="de">Microsoft Power Platform Architekt | Leiter Business Intelligence</p>
-        <p class="lang-content" style="text-align: justify;" data-lang="en">Cologne NRW Germany</p>
-        <p class="lang-content" style="text-align: justify;display: none;" data-lang="de">Köln NRW Deutschland</p>
-      </div>
-
-      <div class="connect-buttons">
-        <a href="https://www.linkedin.com/in/navanshmahajan/" target="_blank" class="connect-button linkedin">
-          <img src="Icons/Linkedin Icon.png" alt="LinkedIn"> LinkedIn
-        </a>
-        <a href="https://www.xing.com/profile/Navansh_Mahajan" target="_blank" class="connect-button xing">
-          <img src="Icons/Xing logo.svg" alt="Xing"> Xing
-        </a>
-        <a class="connect-button cv-button cv-modal-trigger" data-image="docs/CV_Navansh_Mahajan.pdf" title="View CV">
-          📜 
-          <span class="lang-content" data-lang="en">Download CV</span>
-          <span class="lang-content" data-lang="de" style="display: none;">Lebenslauf herunterladen</span>
-        </a>
-      </div>
+    </div> <div class="header-text">
+      <h1>Navansh Mahajan</h1>
+      <p class="lang-content" style="text-align: center;" data-lang="en">Microsoft Power Platform Architect | Business Intelligence Lead</p>
+      <p class="lang-content" style="text-align: center; display: none;" data-lang="de">Microsoft Power Platform Architekt | Leiter Business Intelligence</p>
+      <p class="lang-content" style="text-align: center;" data-lang="en">Cologne | NRW | Germany</p>
+      <p class="lang-content" style="text-align: center; display: none;" data-lang="de">Köln | NRW | Deutschland</p>
     </div>
+
+    <div class="connect-buttons">
+      <a href="https://www.linkedin.com/in/navanshmahajan/" target="_blank" class="connect-button linkedin">
+        <img src="Icons/Linkedin Icon.png" alt="LinkedIn"> LinkedIn
+      </a>
+      <a href="https://www.xing.com/profile/Navansh_Mahajan" target="_blank" class="connect-button xing">
+        <img src="Icons/Xing logo.svg" alt="Xing"> Xing
+      </a>
+      <a class="connect-button cv-button cv-modal-trigger" data-image="docs/CV Navansh Mahajan.pdf" title="View CV">
+        📜 
+        <span class="lang-content" data-lang="en">Download CV</span>
+        <span class="lang-content" data-lang="de" style="display: none;">Lebenslauf herunterladen</span>
+      </a>
+    </div>
+
   </header>
 
   <section id="about">
@@ -830,6 +814,7 @@
 <!-- This is a simple personal webpage for Navansh Mahajan, showcasing his skills, projects, and contact information. The design is responsive and includes a navigation bar, header section with profile image, skills list, project cards, and a contact section. The page also features a language switcher for English and German. -->
 
 <!-- The CSS styles are included within the HTML for simplicity, and the JavaScript at the end handles the language switching functionality. -->
+
 
 
 
