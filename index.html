@@ -69,9 +69,8 @@
 
     /* Header - Full Width */
     header {
-      background: linear-gradient(135deg, #0078d4, #00aaff);
-      background: radial-gradient(circle at center, rgba(0, 0, 0, 0.7) 0%, transparent 70%);
-      color: white;
+      /* Recreates the grey gradient background from your screenshot */
+      background: radial-gradient(circle at center, #a8a8a8 0%, #555555 100%);
       padding: 1rem 20px;
       display: flex;
       align-items: center;
@@ -83,11 +82,88 @@
       flex-wrap: wrap;
     }
 
+    /* Profile Image (Left-Aligned & Size Locked) */
+    .header-image {
+      flex: 1; 
+      display: flex;
+      justify-content: flex-start; 
+    }
+
+    .header-image img {
+      width: 110px !important;  /* The !important tag stops it from turning giant */
+      height: 110px !important;
+      border-radius: 50% !important;
+      border: 3px solid #fff;
+      object-fit: cover;        /* Ensures the photo doesn't stretch */
+    }
+
+    /* Name & Title (Perfectly Centered) */
+    .header-text {
+      flex: 2; 
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .header-text h1 {
+      font-size: 1.8rem;
+      margin: 0;
+      font-weight: bold;
+      color: #ffffff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6); /* Helps text pop against the grey */
+    }
+
+    .header-text p {
+      font-size: 1rem;
+      margin: 5px 0;
+      color: #ffffff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
+    /* Connect Buttons (Right-Aligned) */
+    .connect-buttons {
+      flex: 1; 
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+
+    .connect-button {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #fff;
+      color: #0078d4;
+      padding: 0px 8px;
+      height: 35px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s, transform 0.2s;
+      border: 2px solid transparent;
+      font-size: 0.85rem;
+      text-decoration: none;
+    }
+
+    .connect-button img {
+      width: 30px;
+      height: auto;
+    }
+
+    .connect-button:hover {
+      background: #e6f2ff;
+      transform: scale(1.05);
+    }
+
+    .linkedin { border-color: #0077b5; }
+    .xing { border-color: #026466; color: #026466; }
     .cv-button {
       border-color: #444; 
       color: #000;        
       background: #f0f0f0;
-      text-decoration: none;
       cursor: pointer; 
     }
 
@@ -707,7 +783,7 @@
     </div>
   </section>
   
-  <a id="floating-cv-btn" class="floating-btn cv-modal-trigger" data-image="docs/CV_Navansh_Mahajan.pdf" title="View CV">
+  <a id="floating-cv-btn" class="floating-btn cv-modal-trigger" data-image="docs/CV Navansh Mahajan.pdf" title="View CV">
     📜 
   </a>
   
@@ -814,6 +890,7 @@
 <!-- This is a simple personal webpage for Navansh Mahajan, showcasing his skills, projects, and contact information. The design is responsive and includes a navigation bar, header section with profile image, skills list, project cards, and a contact section. The page also features a language switcher for English and German. -->
 
 <!-- The CSS styles are included within the HTML for simplicity, and the JavaScript at the end handles the language switching functionality. -->
+
 
 
 
