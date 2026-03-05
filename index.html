@@ -986,7 +986,7 @@
       clickableCards.forEach(card => {
         card.addEventListener('click', (e) => {
           // CRITICAL: Only proceed if the user clicked exactly on the 'Open' or 'Details' link
-          if (!e.target.closest('.open-link')) {
+          if (!e.target.closest('.open-link') && !e.target.closest('.details-link')) {
             return; 
           }
 
@@ -1051,6 +1051,7 @@
 <!-- This is a simple personal webpage for Navansh Mahajan, showcasing his skills, projects, and contact information. The design is responsive and includes a navigation bar, header section with profile image, skills list, project cards, and a contact section. The page also features a language switcher for English and German. -->
 
 <!-- The CSS styles are included within the HTML for simplicity, and the JavaScript at the end handles the language switching functionality. -->
+
 
 
 
